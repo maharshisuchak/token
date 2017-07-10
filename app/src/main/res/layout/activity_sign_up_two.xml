@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.smartsensesolutions.token.activity.SignUpTwo">
+
+    <TextView
+        android:id="@+id/sign_up_one_sign_up_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:gravity="center"
+        android:text="@string/landing_signup_title" />
+
+    <TextView
+        android:id="@+id/txt_st_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_up_one_sign_up_back"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_landing"
+        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_marginRight="@dimen/margin_landing"
+        android:text="@string/sing_up_two_header_title"
+        android:textSize="@dimen/landing_text_size_sign_up_two_header" />
+
+    <TextView
+        android:id="@+id/txt_st_header_extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_st_header"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_footer_landing"
+        android:layout_marginRight="@dimen/margin_footer_landing"
+        android:text="@string/sing_up_two_header_extra_title"
+        android:textSize="@dimen/landing_text_size_sign_up_two_header" />
+
+    <LinearLayout
+        android:id="@+id/linear_sing_up_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_st_header_extra"
+        android:layout_marginBottom="@dimen/margin_landing"
+        android:layout_marginLeft="@dimen/margin_footer_landing"
+        android:layout_marginRight="@dimen/margin_footer_landing"
+        android:layout_marginTop="@dimen/margin_landing"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/layout_numbers"
+        layout="@layout/row_numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_sing_up"
+        android:layout_below="@+id/linear_sing_up_two" />
+
+    <LinearLayout
+        android:id="@+id/linear_sing_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_sign_up_continue"
+        android:layout_marginBottom="@dimen/margin_numbers_top"
+        android:layout_marginLeft="@dimen/margin_footer_landing"
+        android:layout_marginRight="@dimen/margin_footer_landing"
+        android:layout_marginTop="@dimen/margin_numbers_top"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_selected_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_sign_up_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/img_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/margin_footer_landing"
+        android:layout_marginRight="@dimen/margin_footer_landing"
+        android:background="@drawable/continue_border"
+        android:gravity="center"
+        android:text="@string/sing_up_continue_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/landing_text_size_sign_up_two_header"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/txt_st_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/img_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/img_logo"
+        android:padding="15dp"
+        android:text="@string/skip_title"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/landing_text_size_sign_up_two_header" />
+
+</RelativeLayout>

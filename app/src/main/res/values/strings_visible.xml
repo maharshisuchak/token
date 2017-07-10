@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="landing_title">Welcome to your digital currency wallet.</string>
+    <string name="landing_footer_title">A better way to do money.</string>
+    <string name="landing_signup_title">Sign Up</string>
+    <string name="landing_signin_title">Sign In</string>
+    <string name="landing_signin_extra_title">Already have an account?</string>
+
+    <string name="hello_title">Hello!</string>
+    <string name="sing_up_title">First, let\'s set you up with a token  account.</string>
+    <string name="sing_up_email_hint">Enter Email</string>
+    <string name="sing_up_password_hint">Choose a Password</string>
+    <string name="sing_up_repeat_password_hint">Repeat Password</string>
+    <string name="sing_up_password_error">*Please choose a stronger password.</string>
+    <string name="sing_up_repeat_password_error">Password does not match.</string>
+    <string name="sing_up_continue_title">CONTINUE</string>
+
+    <string name="sing_up_two_header_title">Next, We highly recommended that you set up a PIN for added security</string>
+    <string name="sing_up_two_header_extra_title">Create a PIN</string>
+
+    <string name="skip_title">Skip</string>
+
+    <string name="sign_up_three_verify_pin_title">Now, Please verify your PIN:</string>
+
+    <string name="sign_up_four_header">With Token, you are in control of your money. But with great power comes great responsibility.<b> We highly recommend that you back up with your wallet,</b> just in case you forget your password or lose access to your account.</string>
+    <string name="sign_up_four_download_title">DOWNLOAD BACKUP</string>
+
+    <string name="sign_up_five_camera_title">Enable Camera Access</string>
+    <string name="sign_up_five_detail_title">When you press "continue", you will see a pop-up to allow the Token app to use your camera. \n\n Token needs this ability in order for you to scan payment codes in order to send payments. Please press "continue" and then press "yes" when you see the pop-up.</string>
+
+    <string name="sign_up_six_contact_title">Enable Contact Access</string>
+    <string name="sign_up_six_detail_title">When you press "continue", you will see a pop-up to allow the Token app to use your contacts. \n\n Token needs this ability in order to allow you to easily send payments to your friends. Please press "continue" and then press "yes" when you see the pop-up.</string>
+
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+
+    <string name="menu_title">A BETTER WAY TO DO MONEY.</string>
+    <string name="menu_total_account_title">Total Account Balance:</string>
+    <string name="menu_my_wallet_title">My Wallets:</string>
+    <string name="menu_spending_wallet_title">Spending Wallet</string>
+    <string name="menu_saving_wallet_title">Savings Wallet</string>
+    <string name="menu_wallet_footer_title">This wallet contains bitcoin</string>
+    <string name="menu_tools_title">Tools</string>
+    <string name="menu_send_money_title">Send Money</string>
+    <string name="menu_request_money_title">Request Money</string>
+    <string name="menu_deposit_title">Deposit / Buy Bitcoin</string>
+    <string name="menu_withdraw_title">Withdraw /  Sell Bitcoin</string>
+    <string name="menu_transfer_title">Transfer Between Wallets</string>
+    <string name="menu_settings_title">Settings</string>
+    <string name="menu_footer_title">(c) 2017 Token Labs LLC, For Support, Contact support@token.com</string>
+
+</resources>
