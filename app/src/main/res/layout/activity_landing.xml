@@ -32,44 +32,65 @@
         android:text="@string/landing_footer_title"
         android:textSize="@dimen/landing_text_size_footer" />
 
-    <TextView
-        android:id="@+id/txt_landing_sign_up"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/txt_landing_sign_in"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="@dimen/margin_landing"
-        android:layout_marginLeft="@dimen/margin_footer_landing"
-        android:layout_marginRight="@dimen/margin_footer_landing"
-        android:background="@drawable/round_border"
-        android:gravity="center"
-        android:text="@string/landing_signup_title"
-        android:textColor="@color/white"
-        android:textSize="@dimen/landing_text_size_footer"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txt_landing_sign_in_extra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="@dimen/margin_footer_landing"
-        android:text="@string/landing_signin_extra_title" />
+        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_marginRight="@dimen/margin_landing"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txt_landing_sign_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginLeft="@dimen/margin_left_landing"
-        android:textStyle="bold"
-        android:layout_marginBottom="@dimen/margin_footer_landing"
-        android:layout_toRightOf="@+id/txt_landing_sign_in_extra"
-        android:text="@string/landing_signin_title"
-        android:textColor="@color/orange" />
+        <TextView
+            android:id="@+id/txt_landing_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_landing_sign_in"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_landing"
+            android:layout_weight="1"
+            android:background="@drawable/round_border"
+            android:gravity="center"
+            android:text="@string/landing_signup_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/landing_text_size_footer"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_footer_landing"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_landing_sign_in_extra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:text="@string/landing_signin_extra_title"
+                android:textSize="@dimen/landing_text_size_footer" />
+
+            <TextView
+                android:id="@+id/txt_landing_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/margin_left_landing"
+                android:layout_toRightOf="@+id/txt_landing_sign_in_extra"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/landing_signin_title"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/landing_text_size_footer"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

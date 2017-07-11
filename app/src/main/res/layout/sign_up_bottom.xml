@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear_sing_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_sign_up_continue"
+        android:layout_marginBottom="@dimen/margin_numbers_top"
+        android:layout_marginLeft="@dimen/margin_footer_landing"
+        android:layout_marginRight="@dimen/margin_footer_landing"
+        android:layout_marginTop="@dimen/margin_numbers_top"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_selected_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_default_dot" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_sign_up_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/img_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/margin_numbers_top"
+        android:layout_marginLeft="@dimen/margin_footer_landing"
+        android:layout_marginRight="@dimen/margin_footer_landing"
+        android:background="@drawable/continue_border"
+        android:gravity="center"
+        android:text="@string/sing_up_continue_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/landing_text_size_sign_up_two_header"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_numbers_top"
+        android:padding="5dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+</LinearLayout>

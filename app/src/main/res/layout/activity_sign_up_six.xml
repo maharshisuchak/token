@@ -1,118 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.smartsensesolutions.token.activity.SignUpSix">
 
-    <TextView
-        android:id="@+id/sign_up_one_sign_up_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/ic_launcher_round"
-        android:gravity="center"
-        android:text="@string/landing_signup_title" />
-
-    <ImageView
-        android:id="@+id/img_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sign_up_one_sign_up_back"
-        android:layout_centerHorizontal="true"
-        android:padding="5dp"
-        android:src="@mipmap/ic_launcher_round" />
-
-    <TextView
-        android:id="@+id/txt_sfive_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/img_camera"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/margin_numbers_top"
-        android:layout_marginLeft="@dimen/margin_footer_landing"
-        android:layout_marginRight="@dimen/margin_footer_landing"
-        android:text="@string/sign_up_six_contact_title"
-        android:textSize="@dimen/landing_text_size_footer" />
-
-    <TextView
-        android:id="@+id/txt_sfive_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_sfive_header"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/margin_footer_landing"
-        android:layout_marginLeft="@dimen/margin_footer_landing"
-        android:layout_marginRight="@dimen/margin_footer_landing"
-        android:text="@string/sign_up_six_detail_title"
-        android:textSize="@dimen/landing_text_size_sign_up_two_header" />
-
-    <LinearLayout
-        android:id="@+id/linear_sing_up"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/txt_sign_up_continue"
-        android:layout_marginBottom="@dimen/margin_numbers_top"
-        android:layout_marginLeft="@dimen/margin_footer_landing"
-        android:layout_marginRight="@dimen/margin_footer_landing"
-        android:layout_marginTop="@dimen/margin_numbers_top"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+            <TextView
+                android:id="@+id/sign_up_one_sign_up_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_launcher_round"
+                android:gravity="center"
+                android:text="@string/landing_signup_title" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+            <ImageView
+                android:id="@+id/img_contact"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/sign_up_one_sign_up_back"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_contact" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+            <TextView
+                android:id="@+id/txt_sfive_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_camera"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_footer_landing"
+                android:layout_marginRight="@dimen/margin_footer_landing"
+                android:layout_marginTop="@dimen/margin_numbers_top"
+                android:text="@string/sign_up_six_contact_title"
+                android:textSize="@dimen/landing_text_size_footer"
+                android:textStyle="bold" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_selected_dot" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txt_sfive_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_sfive_header"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_footer_landing"
+                android:layout_marginLeft="@dimen/margin_landing"
+                android:layout_marginRight="@dimen/margin_landing"
+                android:layout_marginTop="@dimen/margin_footer_landing"
+                android:text="@string/sign_up_six_detail_title"
+                android:textSize="@dimen/landing_text_size_sign_up_two_header" />
 
-    <TextView
-        android:id="@+id/txt_sign_up_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/img_logo"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom"
-        android:layout_marginLeft="@dimen/margin_footer_landing"
-        android:layout_marginRight="@dimen/margin_footer_landing"
-        android:background="@drawable/continue_border"
-        android:gravity="center"
-        android:text="@string/sing_up_continue_title"
-        android:textColor="@color/white"
-        android:textSize="@dimen/landing_text_size_sign_up_two_header"
-        android:textStyle="bold" />
+            <include
+                android:id="@+id/signup_bottom"
+                layout="@layout/sign_up_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-    <ImageView
-        android:id="@+id/img_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:padding="5dp"
-        android:src="@mipmap/ic_launcher_round" />
+        </LinearLayout>
+    </ScrollView>
 
-</RelativeLayout>
+</LinearLayout>

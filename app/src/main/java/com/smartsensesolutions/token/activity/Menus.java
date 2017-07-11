@@ -35,6 +35,8 @@ public class Menus extends AppCompatActivity
         toggle.syncState();
 
         initializeControls();
+
+        goToFragment();
     }
 
     public void initializeControls() {
@@ -63,24 +65,24 @@ public class Menus extends AppCompatActivity
         }
     }
 
-//    public void goToFragment() {
-//        try {
-//            Fragment fragment = new Dashboard();
-//            if (fragment != null) {
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                fragmentManager.beginTransaction()
-//                        .replace(R.id.container, fragment).commit();
-//
-//            } else {
-//                // error in creating fragment
-//                Log.e("MainActivity", "Error in creating fragment");
-//            }
-//        } catch (NullPointerException e) {
-//            e.printStackTrace();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public void goToFragment() {
+        try {
+            Fragment fragment = new Dashboard();
+            if (fragment != null) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, fragment).commit();
+
+            } else {
+                // error in creating fragment
+                Log.e("MainActivity", "Error in creating fragment");
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void closeDrawer() {
         try {

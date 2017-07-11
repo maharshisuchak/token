@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.smartsensesolutions.token.activity.SendMoney">
+
+    <TextView
+        android:id="@+id/sign_up_one_sign_up_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:gravity="center"
+        android:text="@string/sm_sm_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/nav_header_image_height"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/txt_send_from_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/number_ten_dp"
+                android:layout_marginTop="@dimen/number_twenty_dp"
+                android:gravity="center"
+                android:text="@string/sm_send_from_title"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/number_twenty_dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_send_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/number_ten_dp"
+                android:background="@drawable/spinner_border" />
+
+            <TextView
+                android:id="@+id/txt_send_to_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/number_ten_dp"
+                android:layout_marginTop="@dimen/number_twenty_dp"
+                android:gravity="center"
+                android:text="@string/sm_send_to_title"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/number_twenty_dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_wallet_send_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:layout_marginTop="@dimen/number_thirty_dp"
+                android:background="@color/gray_text"
+                android:drawableLeft="@drawable/ic_qr_code"
+                android:gravity="center"
+                android:padding="@dimen/number_ten_dp"
+                android:text="@string/sm_scan_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/landing_text_size_footer"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_manually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:layout_marginTop="@dimen/number_fifty_dp"
+                android:background="@drawable/normal_border"
+                android:drawableLeft="@mipmap/ic_launcher_round"
+                android:gravity="center"
+                android:padding="@dimen/number_five_dp"
+                android:text="@string/sm_manually_title"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/landing_text_size_sign_up_two_header"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:layout_marginTop="@dimen/number_ten_dp"
+                android:background="@drawable/normal_border"
+                android:drawableLeft="@mipmap/ic_launcher_round"
+                android:gravity="center"
+                android:padding="@dimen/number_five_dp"
+                android:text="@string/sm_transfer_title"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/landing_text_size_sign_up_two_header"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:layout_marginTop="@dimen/number_thirty_dp"
+                android:gravity="center"
+                android:padding="@dimen/number_ten_dp"
+                android:text="@string/sm_fund_title"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/landing_text_menu_detail" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

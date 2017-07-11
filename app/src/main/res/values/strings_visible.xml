@@ -59,4 +59,40 @@
     <string name="menu_settings_title">Settings</string>
     <string name="menu_footer_title">(c) 2017 Token Labs LLC, For Support, Contact support@token.com</string>
 
+    <string name="tab_wallet_title">Wallet</string>
+    <string name="tab_transaction_title">Transaction</string>
+
+    <string name="wallet_hb_title">Hide Balance</string>
+    <string name="wallet_ds_title">$</string>
+    <string name="wallet_am_title">Add Money</string>
+    <string name="wallet_sm_title">Send Money</string>
+    <string name="wallet_rm_title">Request Money</string>
+    <string name="wallet_wm_title">Withdraw</string>
+    <string name="wallet_dm_title">Deposit</string>
+
+
+    <string name="sm_sm_title">SEND MONEY</string>
+    <string name="rm_rm_title">RECEIVE MONEY</string>
+    <string name="sm_send_from_title">Send From:</string>
+    <string name="sm_send_to_title">Send To:</string>
+    <string name="sm_scan_title">Scan Payment Code</string>
+    <string name="sm_manually_title">Manually Enter Address</string>
+    <string name="sm_transfer_title">Transfer Between My Wallets</string>
+    <string name="sm_fund_title">Funds can be sent to any bitcoin, ethereum, or monero address.</string>
+    <string name="rm_deposit_title">Deposit To:</string>
+    <string name="rm_copy_title">Copy</string>
+    <string name="rm_share_title">Share</string>
+    <string name="rm_request_specific_title">Request Specific Amount</string>
+    <string name="rm_qr_terms_title">Use this QR code and address to receive bitcoin. For maximum privacy, we provide you with a new address / QR code for every deposit, but you can use them any time to receive funds into your wallet.</string>
+
+    <string name="enter_amount_sending">Sending to:</string>
+    <string name="sending_detail_sending">Sending</string>
+
+    <string name="ts_from_title">From:</string>
+    <string name="ts_to_title">To:</string>
+    <string name="ts_network_title">Network Fee*:</string>
+    <string name="ts_conversion_title">Conversion Fee*:</string>
+    <string name="ts_send_title">SEND</string>
+    <string name="ts_terms_title">*Network fee is the amount required by the bitcoin network in order to send your transaction. This fee is not paid to Token.</string>
+
 </resources>
