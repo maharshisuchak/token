@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/number_ten_dp">
+
+    <ImageView
+        android:id="@+id/img_transaction"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_height"
+        android:layerType="software"
+        android:src="@drawable/ic_menu_send_money" />
+
+    <TextView
+        android:id="@+id/txt_transaction_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_toRightOf="@+id/img_transaction"
+        android:text="@string/menu_send_money_title"
+        android:textSize="@dimen/number_fifteen_dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_transaction_dollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_toRightOf="@+id/txt_transaction_title"
+        android:gravity="right"
+        android:text="@string/menu_send_money_title"
+        android:textSize="@dimen/number_fifteen_dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_transaction_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_transaction_title"
+        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_toRightOf="@+id/img_transaction"
+        android:gravity="left"
+        android:layout_alignBaseline="@+id/txt_transaction_bitcoin"
+        android:text="@string/menu_send_money_title"
+        android:textSize="@dimen/landing_text_menu_detail" />
+
+    <TextView
+        android:id="@+id/txt_transaction_bitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txt_transaction_dollar"
+        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_toRightOf="@+id/txt_transaction_detail"
+        android:gravity="right"
+        android:text="@string/menu_send_money_title"
+        android:textSize="@dimen/landing_text_menu_detail" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/img_transaction"
+        android:layout_marginTop="@dimen/number_ten_dp"
+        android:layerType="software"
+        android:src="@drawable/dotted_line" />
+
+</RelativeLayout>

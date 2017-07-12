@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@mipmap/ic_launcher_round"
                 android:gravity="center"
-                android:text="@string/landing_signup_title" />
+                android:text="@string/landing_signin_title" />
 
             <TextView
                 android:id="@+id/txt_sign_up_one_hello"

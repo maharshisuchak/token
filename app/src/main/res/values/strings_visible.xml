@@ -60,7 +60,7 @@
     <string name="menu_footer_title">(c) 2017 Token Labs LLC, For Support, Contact support@token.com</string>
 
     <string name="tab_wallet_title">Wallet</string>
-    <string name="tab_transaction_title">Transaction</string>
+    <string name="tab_transaction_title">Transactions</string>
 
     <string name="wallet_hb_title">Hide Balance</string>
     <string name="wallet_ds_title">$</string>
@@ -100,5 +100,7 @@
     <string name="re_password_empty_error">*Please Enter Repeat Password.</string>
     <string name="email_valid_error">*Please Enter valid Email Address.</string>
     <string name="password_match_error">*Password does not match.</string>
+
+    <string name="today_title">Today</string>
 
 </resources>

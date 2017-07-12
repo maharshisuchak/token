@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class SendMoney extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private Spinner spinnerSendFrom;
-    private TextView txtTransferBetweenWallet, txtManually;
+    private TextView txtTransferBetweenWallet, txtManually, actionBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,9 @@ public class SendMoney extends AppCompatActivity implements AdapterView.OnItemSe
             spinnerSendFrom = (Spinner) findViewById(R.id.spinner_send_from);
             txtTransferBetweenWallet = (TextView) findViewById(R.id.txt_transfer);
             txtManually = (TextView) findViewById(R.id.txt_manually);
+            actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
 
+            actionBack.setOnClickListener(this);
             spinnerSendFrom.setOnItemSelectedListener(this);
             txtTransferBetweenWallet.setOnClickListener(this);
             txtManually.setOnClickListener(this);
@@ -96,6 +98,9 @@ public class SendMoney extends AppCompatActivity implements AdapterView.OnItemSe
                 break;
             case R.id.txt_manually:
                 goTo(EnterAmount.class);
+                break;
+            case R.id.sign_up_one_sign_up_back:
+                onBackPressed();
                 break;
         }
     }

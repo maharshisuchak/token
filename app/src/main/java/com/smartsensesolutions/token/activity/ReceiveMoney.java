@@ -5,15 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.adapters.ReceiveMoneyAdapter;
 
 import java.util.ArrayList;
 
-public class ReceiveMoney extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class ReceiveMoney extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private Spinner spinnerReceiveMoney;
+    private TextView actionBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,9 @@ public class ReceiveMoney extends AppCompatActivity implements AdapterView.OnIte
     public void initializeControls() {
         try {
             spinnerReceiveMoney = (Spinner) findViewById(R.id.spinner_receive_money);
+            actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
+
+            actionBack.setOnClickListener(this);
             spinnerReceiveMoney.setOnItemSelectedListener(this);
 
             setSpinnerValue();
@@ -70,5 +75,14 @@ public class ReceiveMoney extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.sign_up_one_sign_up_back:
+                onBackPressed();
+                break;
+        }
     }
 }

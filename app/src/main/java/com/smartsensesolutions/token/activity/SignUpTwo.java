@@ -12,7 +12,7 @@ import com.smartsensesolutions.token.R;
 
 public class SignUpTwo extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtContinue, txtOne, txtTwo, txtThree, txtFour, txtFive, txtSix, txtSeven, txtEight, txtNine, txtZero, txtBack;
+    private TextView txtContinue, txtOne, txtTwo, txtThree, txtFour, txtFive, txtSix, txtSeven, txtEight, txtNine, txtZero, txtBack,actionBack;
     private ImageView imageIndicatorTwo, imagePinOne, imagePinTwo, imagePinThree, imagePinFour;
     private String strPin = "";
 
@@ -36,6 +36,7 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
         txtNine = (TextView) findViewById(R.id.txt_nine);
         txtZero = (TextView) findViewById(R.id.txt_zero);
         txtBack = (TextView) findViewById(R.id.txt_back);
+        actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
 
         imagePinOne = (ImageView) findViewById(R.id.img_pin_one);
         imagePinTwo = (ImageView) findViewById(R.id.img_pin_two);
@@ -57,6 +58,7 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
         txtNine.setOnClickListener(this);
         txtZero.setOnClickListener(this);
         txtBack.setOnClickListener(this);
+        actionBack.setOnClickListener(this);
     }
 
     @Override
@@ -103,6 +105,9 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.txt_back:
                 performBack();
+                break;
+            case R.id.sign_up_one_sign_up_back:
+                onBackPressed();
                 break;
         }
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.smartsensesolutions.token.activity.SendMoney">
+    tools:context="com.smartsensesolutions.token.activity.TransferMyWallet">
 
     <TextView
         android:id="@+id/sign_up_one_sign_up_back"

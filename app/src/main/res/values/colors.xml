@@ -12,5 +12,7 @@
     <color name="green">#82ba00</color>
     <color name="sky_text">#2f8bbd</color>
     <color name="error_text">#c74c50</color>
+    <color name="yellow">#edd051</color>
+    <color name="red">#c74c50</color>
 
 </resources>

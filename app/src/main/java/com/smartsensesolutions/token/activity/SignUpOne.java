@@ -18,7 +18,7 @@ import com.smartsensesolutions.token.config.ConfigCommonClass;
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
 public class SignUpOne extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtContinue, txtEmailError, txtPasswordError, txtRePasswordError;
+    private TextView txtContinue, txtEmailError, txtPasswordError, txtRePasswordError, actionBack;
     private EditText edEmail, edPassword, edRePassword;
     private ImageView imageIndicatorOne;
 
@@ -41,8 +41,11 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
         txtRePasswordError = (TextView) findViewById(R.id.txt_re_password_error);
         imageIndicatorOne = (ImageView) findViewById(R.id.img_indicator_one);
         imageIndicatorOne.setImageResource(R.drawable.ic_selected_dot);
+        actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
 
+        actionBack.setOnClickListener(this);
         txtContinue.setOnClickListener(this);
+
 
         edEmail.addTextChangedListener(new TextWatcher() {
 
@@ -142,8 +145,10 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txt_sign_up_continue:
-                //validateSingUp();
-                goTo(SignUpTwo.class);
+                validateSingUp();
+                break;
+            case R.id.sign_up_one_sign_up_back:
+                onBackPressed();
                 break;
         }
     }
