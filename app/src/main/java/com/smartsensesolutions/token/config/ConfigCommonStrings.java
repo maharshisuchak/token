@@ -87,4 +87,7 @@ public class ConfigCommonStrings {
     public static String TS_PLUS = "plus";
 
     public static String DATE_FORMAT = "MMM dd, yyyy";
+
+    public static String KEY_INTENT_FROM_TOKEN_SENDING = "key_from_token_sending";
+    public static String VALUE_INTENT_FROM_TOKEN_SENDING = "value_from_token_sending";
 }

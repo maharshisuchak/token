@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.adapters.DashboardAdapter;
+import com.smartsensesolutions.token.config.ConfigCommonStrings;
 
 public class Dashboard extends Fragment {
 
@@ -33,6 +34,22 @@ public class Dashboard extends Fragment {
 
             setupViewPager(viewPager);
             tabLayout.setupWithViewPager(viewPager);
+
+            getIntentValue();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getIntentValue() {
+        try {
+            if (getActivity().getIntent() != null) {
+                if (getActivity().getIntent().hasExtra(ConfigCommonStrings.KEY_INTENT_FROM_TOKEN_SENDING)) {
+                    viewPager.setCurrentItem(2);
+                }
+            }
         } catch (NullPointerException e) {
             e.printStackTrace();
         } catch (Exception e) {

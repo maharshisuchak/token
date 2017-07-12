@@ -20,6 +20,7 @@
     <string name="sing_up_two_header_extra_title">Create a PIN</string>
 
     <string name="skip_title">Skip</string>
+    <string name="back_title">Back</string>
 
     <string name="sign_up_three_verify_pin_title">Now, Please verify your PIN:</string>
 

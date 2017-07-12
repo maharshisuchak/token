@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_footer_landing"
+        android:gravity="center"
         android:text="@string/landing_title"
         android:textSize="@dimen/landing_text_size_header" />
 
@@ -80,7 +81,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="right"
-                android:layout_marginLeft="@dimen/margin_left_landing"
+                 android:layout_marginLeft="@dimen/margin_left_landing"
+                android:layout_marginRight="@dimen/number_fifteen_dp"
                 android:layout_toRightOf="@+id/txt_landing_sign_in_extra"
                 android:layout_weight="1"
                 android:gravity="right"
