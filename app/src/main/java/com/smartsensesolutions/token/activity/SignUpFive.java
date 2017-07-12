@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.smartsensesolutions.token.R;
@@ -11,6 +12,7 @@ import com.smartsensesolutions.token.R;
 public class SignUpFive extends AppCompatActivity implements View.OnClickListener {
 
     private TextView txtContinue;
+    private ImageView imageIndicatorFour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,8 @@ public class SignUpFive extends AppCompatActivity implements View.OnClickListene
 
     public void initializeControls() {
         txtContinue = (TextView) findViewById(R.id.txt_sign_up_continue);
+        imageIndicatorFour = (ImageView) findViewById(R.id.img_indicator_four);
+        imageIndicatorFour.setImageResource(R.drawable.ic_selected_dot);
         txtContinue.setOnClickListener(this);
     }
 

@@ -50,30 +50,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txt_landing_header"
-                android:layout_margin="@dimen/margin_landing"
+                android:layout_marginBottom="@dimen/number_ten_dp"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:layout_marginTop="@dimen/number_twenty_dp"
                 android:background="@drawable/edittext_border"
                 android:hint="@string/sing_up_email_hint"
                 android:textColorHint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txt_email_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/number_ten_dp"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:text="@string/email_empty_error"
+                android:textColor="@color/error_text"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/ed_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ed_email"
-                android:layout_margin="@dimen/margin_landing"
+                android:layout_marginBottom="@dimen/number_ten_dp"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:layout_marginTop="@dimen/number_ten_dp"
                 android:background="@drawable/edittext_border"
                 android:hint="@string/sing_up_password_hint"
                 android:textColorHint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txt_password_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/number_ten_dp"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:text="@string/password_empty_error"
+                android:textColor="@color/error_text"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/ed_repeat_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ed_password"
-                android:layout_margin="@dimen/margin_landing"
+                android:layout_marginBottom="@dimen/number_ten_dp"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:layout_marginTop="@dimen/number_ten_dp"
                 android:background="@drawable/edittext_border"
                 android:hint="@string/sing_up_repeat_password_hint"
                 android:textColorHint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txt_re_password_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/number_ten_dp"
+                android:layout_marginLeft="@dimen/number_twenty_dp"
+                android:layout_marginRight="@dimen/number_twenty_dp"
+                android:text="@string/re_password_empty_error"
+                android:textColor="@color/error_text"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <include
                 android:id="@+id/signup_bottom"

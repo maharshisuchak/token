@@ -51,24 +51,28 @@
 
 
                 <ImageView
+                    android:id="@+id/img_pin_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/ic_default_dot" />
 
                 <ImageView
+                    android:id="@+id/img_pin_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/ic_default_dot" />
 
                 <ImageView
+                    android:id="@+id/img_pin_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/ic_default_dot" />
 
                 <ImageView
+                    android:id="@+id/img_pin_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

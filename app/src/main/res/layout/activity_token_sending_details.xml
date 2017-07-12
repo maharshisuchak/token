@@ -235,6 +235,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/number_ten_dp"
+                android:layout_marginRight="@dimen/number_ten_dp"
                 android:layout_marginTop="@dimen/number_forty_dp"
                 android:background="@color/orange"
                 android:gravity="center"

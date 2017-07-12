@@ -95,4 +95,10 @@
     <string name="ts_send_title">SEND</string>
     <string name="ts_terms_title">*Network fee is the amount required by the bitcoin network in order to send your transaction. This fee is not paid to Token.</string>
 
+    <string name="email_empty_error">*Please Enter Email Address.</string>
+    <string name="password_empty_error">*Please Enter Password.</string>
+    <string name="re_password_empty_error">*Please Enter Repeat Password.</string>
+    <string name="email_valid_error">*Please Enter valid Email Address.</string>
+    <string name="password_match_error">*Password does not match.</string>
+
 </resources>

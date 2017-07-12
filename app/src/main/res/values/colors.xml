@@ -11,5 +11,6 @@
     <color name="sky">#43b3d9</color>
     <color name="green">#82ba00</color>
     <color name="sky_text">#2f8bbd</color>
+    <color name="error_text">#c74c50</color>
 
 </resources>

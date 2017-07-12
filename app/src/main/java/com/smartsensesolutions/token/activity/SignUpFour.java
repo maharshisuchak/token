@@ -1,16 +1,18 @@
 package com.smartsensesolutions.token.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.smartsensesolutions.token.R;
 
-public class SignUpFour extends AppCompatActivity  implements View.OnClickListener {
+public class SignUpFour extends AppCompatActivity implements View.OnClickListener {
 
     private TextView txtContinue;
+    private ImageView imageIndicatorThree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,8 @@ public class SignUpFour extends AppCompatActivity  implements View.OnClickListen
 
     public void initializeControls() {
         txtContinue = (TextView) findViewById(R.id.txt_sign_up_continue);
+        imageIndicatorThree = (ImageView) findViewById(R.id.img_indicator_three);
+        imageIndicatorThree.setImageResource(R.drawable.ic_selected_dot);
         txtContinue.setOnClickListener(this);
     }
 
