@@ -145,8 +145,7 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txt_sign_up_continue:
-                //validateSingUp();
-                goTo(SignUpTwo.class);
+                validateSingUp();
                 break;
             case R.id.sign_up_one_sign_up_back:
                 onBackPressed();
