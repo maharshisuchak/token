@@ -70,13 +70,13 @@ public class TransactionsAdapter extends RecyclerView.Adapter<TransactionsAdapte
         }
 
         if (transaction.getTransaction_status().equals(ConfigCommonStrings.TS_UNCONFIRMED)) {
-            holder.transaction_dollar.setTextColor(holder.transaction_dollar.getContext().getColor(R.color.yellow));
+            holder.transaction_dollar.setTextColor(holder.transaction_dollar.getContext().getResources().getColor(R.color.yellow));
         } else if (transaction.getTransaction_status().equals(ConfigCommonStrings.TS_MINUS)) {
-            holder.transaction_dollar.setTextColor(holder.transaction_dollar.getContext().getColor(R.color.red));
+            holder.transaction_dollar.setTextColor(holder.transaction_dollar.getContext().getResources().getColor(R.color.red));
         } else if (transaction.getTransaction_status().equals(ConfigCommonStrings.TS_NORMAL)) {
-            holder.transaction_dollar.setTextColor(holder.transaction_dollar.getContext().getColor(R.color.gray_text));
+            holder.transaction_dollar.setTextColor(holder.transaction_dollar.getContext().getResources().getColor(R.color.gray_text));
         } else if (transaction.getTransaction_status().equals(ConfigCommonStrings.TS_PLUS)) {
-            holder.transaction_dollar.setTextColor(holder.transaction_dollar.getContext().getColor(R.color.green));
+            holder.transaction_dollar.setTextColor(holder.transaction_dollar.getContext().getResources().getColor(R.color.green));
         }
     }
 

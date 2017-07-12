@@ -41,7 +41,7 @@
                 android:gravity="center"
                 android:text="@string/rm_deposit_title"
                 android:textColor="@color/gray_text"
-                android:textSize="@dimen/number_twenty_dp"
+                android:textSize="@dimen/number_fifteen_dp"
                 android:textStyle="bold" />
 
             <Spinner
@@ -72,7 +72,7 @@
                 android:gravity="center"
                 android:text="32gMri1alhdhfdbfbkjsdfkjfkdgbgknjk"
                 android:textColor="@color/gray_text"
-                android:textSize="@dimen/number_twenty_dp"
+                android:textSize="@dimen/number_fifteen_dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -92,7 +92,7 @@
                     android:gravity="center"
                     android:paddingBottom="@dimen/number_five_dp"
                     android:paddingLeft="@dimen/number_five_dp"
-                    android:paddingRight="@dimen/number_forty_dp"
+                    android:paddingRight="@dimen/number_five_dp"
                     android:paddingTop="@dimen/number_five_dp"
                     android:text="@string/rm_copy_title"
                     android:textColor="@color/white"
@@ -112,7 +112,7 @@
                     android:gravity="center"
                     android:paddingBottom="@dimen/number_five_dp"
                     android:paddingLeft="@dimen/number_five_dp"
-                    android:paddingRight="@dimen/number_forty_dp"
+                    android:paddingRight="@dimen/number_five_dp"
                     android:paddingTop="@dimen/number_five_dp"
                     android:text="@string/rm_share_title"
                     android:textColor="@color/white"

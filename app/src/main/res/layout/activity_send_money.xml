@@ -41,7 +41,7 @@
                 android:gravity="center"
                 android:text="@string/sm_send_from_title"
                 android:textColor="@color/gray_text"
-                android:textSize="@dimen/number_twenty_dp"
+                android:textSize="@dimen/number_fifteen_dp"
                 android:textStyle="bold" />
 
             <Spinner
@@ -60,7 +60,7 @@
                 android:gravity="center"
                 android:text="@string/sm_send_to_title"
                 android:textColor="@color/gray_text"
-                android:textSize="@dimen/number_twenty_dp"
+                android:textSize="@dimen/number_fifteen_dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -72,9 +72,9 @@
                 android:layout_marginRight="@dimen/number_twenty_dp"
                 android:layout_marginTop="@dimen/number_thirty_dp"
                 android:background="@color/gray_text"
-                android:drawableLeft="@drawable/ic_qr_code"
+                android:drawableLeft="@mipmap/ic_launcher_round"
                 android:gravity="center"
-                android:padding="@dimen/number_ten_dp"
+                android:padding="@dimen/number_five_dp"
                 android:text="@string/sm_scan_title"
                 android:textColor="@color/white"
                 android:textSize="@dimen/landing_text_size_footer"

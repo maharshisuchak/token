@@ -16,7 +16,7 @@
         android:id="@+id/txt_transaction_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_marginLeft="@dimen/margin_numbers_top"
         android:layout_toRightOf="@+id/img_transaction"
         android:text="@string/menu_send_money_title"
         android:textSize="@dimen/number_fifteen_dp"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_marginLeft="@dimen/number_fifteen_dp"
         android:layout_toRightOf="@+id/txt_transaction_title"
         android:gravity="right"
         android:text="@string/menu_send_money_title"
@@ -38,11 +38,11 @@
         android:id="@+id/txt_transaction_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_transaction_bitcoin"
         android:layout_below="@+id/txt_transaction_title"
-        android:layout_marginLeft="@dimen/margin_landing"
+        android:layout_marginLeft="@dimen/margin_numbers_top"
         android:layout_toRightOf="@+id/img_transaction"
         android:gravity="left"
-        android:layout_alignBaseline="@+id/txt_transaction_bitcoin"
         android:text="@string/menu_send_money_title"
         android:textSize="@dimen/landing_text_menu_detail" />
 
@@ -61,8 +61,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:layout_below="@+id/img_transaction"
-        android:layout_marginTop="@dimen/number_ten_dp"
+        android:layout_below="@+id/txt_transaction_bitcoin"
+        android:layout_marginTop="@dimen/number_thirty_dp"
         android:layerType="software"
         android:src="@drawable/dotted_line" />
 
