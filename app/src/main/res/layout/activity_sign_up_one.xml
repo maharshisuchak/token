@@ -19,7 +19,8 @@
                 android:id="@+id/sign_up_one_sign_up_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/ic_launcher_round"
+                android:layout_marginTop="@dimen/number_five_dp"
+                android:drawableLeft="@drawable/ic_left_slim_arrow"
                 android:gravity="center"
                 android:text="@string/landing_signin_title" />
 
@@ -42,6 +43,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/margin_footer_landing"
                 android:layout_marginRight="@dimen/margin_footer_landing"
+                android:gravity="center"
                 android:text="@string/sing_up_title"
                 android:textSize="@dimen/landing_text_size_footer" />
 
@@ -65,6 +67,7 @@
                 android:layout_marginBottom="@dimen/number_ten_dp"
                 android:layout_marginLeft="@dimen/number_twenty_dp"
                 android:layout_marginRight="@dimen/number_twenty_dp"
+                android:gravity="center"
                 android:text="@string/email_empty_error"
                 android:textColor="@color/error_text"
                 android:textStyle="bold"
@@ -90,6 +93,7 @@
                 android:layout_marginBottom="@dimen/number_ten_dp"
                 android:layout_marginLeft="@dimen/number_twenty_dp"
                 android:layout_marginRight="@dimen/number_twenty_dp"
+                android:gravity="center"
                 android:text="@string/password_empty_error"
                 android:textColor="@color/error_text"
                 android:textStyle="bold"
@@ -115,6 +119,7 @@
                 android:layout_marginBottom="@dimen/number_ten_dp"
                 android:layout_marginLeft="@dimen/number_twenty_dp"
                 android:layout_marginRight="@dimen/number_twenty_dp"
+                android:gravity="center"
                 android:text="@string/re_password_empty_error"
                 android:textColor="@color/error_text"
                 android:textStyle="bold"

@@ -12,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:layout_marginTop="@dimen/number_five_dp"
+        android:drawableLeft="@drawable/ic_left_arrow"
+        android:drawablePadding="@dimen/number_five_dp"
         android:gravity="center"
         android:text="@string/sm_sm_title" />
 

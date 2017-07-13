@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.smartsensesolutions.token.R;
@@ -45,8 +46,22 @@ public class SendFromAdapter extends BaseAdapter {
         view = inflter.inflate(R.layout.row_spinner_send_from, null);
         TextView tvTitle = (TextView) view.findViewById(R.id.spinner_title);
         TextView tvValue = (TextView) view.findViewById(R.id.spinner_value);
-        tvTitle.setText(title.get(i));
-        tvValue.setText(Html.fromHtml("<small><sup>$</sup></small>" + value.get(i) + "<small><sup>39</sup></small>"));
+        ImageView imageArrow = (ImageView) view.findViewById(R.id.image_arrow);
+
+        try {
+            if (i == 0) {
+                imageArrow.setVisibility(View.VISIBLE);
+            } else {
+                imageArrow.setVisibility(View.INVISIBLE);
+            }
+
+            tvTitle.setText(title.get(i));
+            tvValue.setText(Html.fromHtml("<small><sup>$</sup></small>" + value.get(i) + "<small><sup>39</sup></small>"));
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return view;
     }
 }

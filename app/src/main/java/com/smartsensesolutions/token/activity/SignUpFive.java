@@ -11,7 +11,7 @@ import com.smartsensesolutions.token.R;
 
 public class SignUpFive extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtContinue,actionBack;
+    private TextView txtContinue, actionBack;
     private ImageView imageIndicatorFour;
 
     @Override
@@ -26,6 +26,7 @@ public class SignUpFive extends AppCompatActivity implements View.OnClickListene
         imageIndicatorFour = (ImageView) findViewById(R.id.img_indicator_four);
         imageIndicatorFour.setImageResource(R.drawable.ic_selected_dot);
         actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
+        txtContinue.setBackground(getResources().getDrawable(R.drawable.continue_orange_border));
         txtContinue.setOnClickListener(this);
         actionBack.setOnClickListener(this);
     }

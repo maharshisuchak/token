@@ -12,8 +12,8 @@ import com.smartsensesolutions.token.R;
 
 public class SignUpThree extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtContinue, txtOne, txtTwo, txtThree, txtFour, txtFive, txtSix, txtSeven, txtEight, txtNine, txtZero, txtBack,actionBack;
-    private ImageView imageIndicatorTwo, imagePinOne, imagePinTwo, imagePinThree, imagePinFour;
+    private TextView txtContinue, txtOne, txtTwo, txtThree, txtFour, txtFive, txtSix, txtSeven, txtEight, txtNine, txtZero,actionBack;
+    private ImageView imageIndicatorTwo, imagePinOne, imagePinTwo, imagePinThree, imagePinFour,txtBack;
     private String strPin = "";
 
     @Override
@@ -35,7 +35,7 @@ public class SignUpThree extends AppCompatActivity implements View.OnClickListen
         txtEight = (TextView) findViewById(R.id.txt_eight);
         txtNine = (TextView) findViewById(R.id.txt_nine);
         txtZero = (TextView) findViewById(R.id.txt_zero);
-        txtBack = (TextView) findViewById(R.id.txt_back);
+        txtBack = (ImageView) findViewById(R.id.txt_back);
         actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
 
         imagePinOne = (ImageView) findViewById(R.id.img_pin_one);

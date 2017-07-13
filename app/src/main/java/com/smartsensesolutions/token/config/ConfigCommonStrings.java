@@ -7,7 +7,7 @@ public class ConfigCommonStrings {
             "  \"transactions\": [\n" +
             "    {\n" +
             "      \"transaction_id\": \"1\",\n" +
-            "      \"transaction_date\": \"Jul 12, 2017\",\n" +
+            "      \"transaction_date\": \"Jul 13, 2017\",\n" +
             "      \"transaction_details\": [\n" +
             "        {\n" +
             "          \"transaction_title\": \"Receive Money\",\n" +

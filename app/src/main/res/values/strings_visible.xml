@@ -16,22 +16,23 @@
     <string name="sing_up_repeat_password_error">Password does not match.</string>
     <string name="sing_up_continue_title">CONTINUE</string>
 
-    <string name="sing_up_two_header_title">Next, We highly recommended that you set up a PIN for added security</string>
+    <string name="sing_up_two_header_title">Next, we highly recommended that you set up a PIN for added security</string>
     <string name="sing_up_two_header_extra_title">Create a PIN</string>
 
     <string name="skip_title">Skip</string>
     <string name="back_title">Back</string>
+    <string name="scan_title">Scan</string>
 
-    <string name="sign_up_three_verify_pin_title">Now, Please verify your PIN:</string>
+    <string name="sign_up_three_verify_pin_title">Now, please verify your PIN:</string>
 
-    <string name="sign_up_four_header">With Token, you are in control of your money. But with great power comes great responsibility.<b> We highly recommend that you back up with your wallet,</b> just in case you forget your password or lose access to your account.</string>
+    <string name="sign_up_four_header">With Token, you are in control of your money. But with great power comes great responsibility.<b> We highly recommend that you back up your wallet,</b> just in case you forget your password or lose access to your account.</string>
     <string name="sign_up_four_download_title">DOWNLOAD BACKUP</string>
 
     <string name="sign_up_five_camera_title">Enable Camera Access</string>
-    <string name="sign_up_five_detail_title">When you press "continue", you will see a pop-up to allow the Token app to use your camera. \n\n Token needs this ability in order for you to scan payment codes in order to send payments. Please press "continue" and then press "yes" when you see the pop-up.</string>
+    <string name="sign_up_five_detail_title">When you press \"continue\", you will see a pop-up to allow the Token app to use your camera. \n\n Token needs this ability in order for you to scan payment codes in order to send payments. Please press \"continue\" and then press \"yes\" when you see the pop-up.</string>
 
     <string name="sign_up_six_contact_title">Enable Contact Access</string>
-    <string name="sign_up_six_detail_title">When you press "continue", you will see a pop-up to allow the Token app to use your contacts. \n\n Token needs this ability in order to allow you to easily send payments to your friends. Please press "continue" and then press "yes" when you see the pop-up.</string>
+    <string name="sign_up_six_detail_title">When you press \"continue\", you will see a pop-up to allow the Token app to use your contacts. \n\n Token needs this ability in order to allow you to easily send payments to your friends. Please press \"continue\" and then press \"yes\" when you see the pop-up.</string>
 
 
     <string name="one">1</string>

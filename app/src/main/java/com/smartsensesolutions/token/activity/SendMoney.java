@@ -50,12 +50,12 @@ public class SendMoney extends AppCompatActivity implements AdapterView.OnItemSe
         try {
             // Spinner Drop down elements
             ArrayList<String> strTitle = new ArrayList<String>();
-            strTitle.add("Automobile");
-            strTitle.add("Business Services");
-            strTitle.add("Computers");
-            strTitle.add("Education");
-            strTitle.add("Personal");
-            strTitle.add("Travel");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
 
             ArrayList<String> strValue = new ArrayList<String>();
             strValue.add("356");

@@ -45,12 +45,12 @@ public class ReceiveMoney extends AppCompatActivity implements AdapterView.OnIte
         try {
             // Spinner Drop down elements
             ArrayList<String> strTitle = new ArrayList<String>();
-            strTitle.add("Automobile");
-            strTitle.add("Business Services");
-            strTitle.add("Computers");
-            strTitle.add("Education");
-            strTitle.add("Personal");
-            strTitle.add("Travel");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
+            strTitle.add("Bitcoin Spending");
 
             ReceiveMoneyAdapter customAdapter = new ReceiveMoneyAdapter(getApplicationContext(), strTitle);
             spinnerReceiveMoney.setAdapter(customAdapter);

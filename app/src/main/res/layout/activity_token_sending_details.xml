@@ -11,7 +11,9 @@
         android:id="@+id/sign_up_one_sign_up_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:layout_marginTop="@dimen/number_five_dp"
+        android:drawableLeft="@drawable/ic_left_arrow"
+        android:drawablePadding="@dimen/number_five_dp"
         android:gravity="center"
         android:text="@string/sm_sm_title" />
 
@@ -116,18 +118,32 @@
                     android:textColor="@color/gray_text"
                     android:textSize="@dimen/number_twenty_dp" />
 
-                <TextView
-                    android:id="@+id/txt_from_value"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
                     android:layout_weight="1"
-                    android:drawableLeft="@mipmap/ic_launcher_round"
-                    android:gravity="center"
-                    android:text="Bitcoin Spending"
-                    android:textColor="@color/gray_text"
-                    android:textSize="@dimen/number_twenty_dp"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/spinner_icon_width"
+                        android:layout_height="@dimen/spinner_icon_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_bitcoin" />
+
+                    <TextView
+                        android:id="@+id/txt_from_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/number_ten_dp"
+                        android:gravity="center"
+                        android:text="Bitcoin Spending"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/number_twenty_dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -223,7 +239,7 @@
                     android:layout_gravity="right"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="0.00013 BTC"
+                    android:text="0.0023 BTC"
                     android:textColor="@color/gray_text"
                     android:textSize="@dimen/number_twenty_dp"
                     android:textStyle="bold" />

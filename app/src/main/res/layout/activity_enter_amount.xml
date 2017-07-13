@@ -12,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:layout_marginTop="@dimen/number_five_dp"
+        android:drawableLeft="@drawable/ic_left_arrow"
+        android:drawablePadding="@dimen/number_five_dp"
         android:gravity="center"
         android:text="@string/sm_sm_title" />
 
@@ -103,7 +105,7 @@
                     android:layout_height="@dimen/spinner_icon_height"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_bitcoin" />
+                    android:src="@mipmap/ic_launcher_round" />
 
             </RelativeLayout>
 
@@ -115,7 +117,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/number_ten_dp"
                 android:layout_toLeftOf="@+id/txt_wallet_dollar"
-                android:text="0.000 Bitcoin"
+                android:text="0.00 Bitcoin"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/number_twenty_dp"
                 android:textStyle="bold" />

@@ -19,7 +19,8 @@
                 android:id="@+id/sign_up_one_sign_up_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/ic_launcher_round"
+                android:layout_marginTop="@dimen/number_five_dp"
+                android:drawableLeft="@drawable/ic_left_slim_arrow"
                 android:gravity="center"
                 android:text="@string/landing_signup_title" />
 

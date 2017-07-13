@@ -100,6 +100,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/number_thirty_dp"
                         android:background="@drawable/add_money_border"
+                        android:drawableLeft="@drawable/ic_add"
                         android:drawablePadding="10dp"
                         android:gravity="center"
                         android:paddingLeft="@dimen/number_twenty_dp"
@@ -111,17 +112,33 @@
 
                 </LinearLayout>
 
-                <ImageView
-                    android:layout_width="@dimen/icon_width"
-                    android:layout_height="@dimen/icon_height"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/linearWallet"
                     android:layout_marginRight="@dimen/number_twenty_dp"
                     android:layout_marginTop="-20dp"
-                    android:background="@drawable/wallet_circle"
-                    android:padding="@dimen/number_five_dp"
-                    android:scaleType="center"
-                    android:src="@drawable/ic_qr_code" />
+                    android:orientation="vertical"
+                    android:padding="@dimen/number_five_dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_width"
+                        android:layout_height="@dimen/icon_height"
+                        android:background="@drawable/wallet_circle"
+                        android:padding="@dimen/number_ten_dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_qr_code" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/scan_title"
+                        android:textColor="@color/gray_text" />
+
+                </LinearLayout>
 
             </RelativeLayout>
 
@@ -141,9 +158,9 @@
                     android:layout_marginRight="@dimen/number_twenty_dp"
                     android:layout_marginTop="@dimen/number_thirty_dp"
                     android:background="@color/gray_text"
-                    android:drawableLeft="@mipmap/ic_launcher_round"
+                    android:drawableLeft="@drawable/ic_right_arrow"
                     android:gravity="center"
-                    android:padding="@dimen/number_five_dp"
+                    android:padding="@dimen/number_ten_dp"
                     android:text="@string/wallet_sm_title"
                     android:textColor="@color/white"
                     android:textSize="@dimen/landing_text_size_footer"
@@ -158,9 +175,9 @@
                     android:layout_marginRight="@dimen/number_twenty_dp"
                     android:layout_marginTop="@dimen/number_ten_dp"
                     android:background="@color/green"
-                    android:drawableLeft="@mipmap/ic_launcher_round"
+                    android:drawableLeft="@drawable/ic_right_arrow"
                     android:gravity="center"
-                    android:padding="@dimen/number_five_dp"
+                    android:padding="@dimen/number_ten_dp"
                     android:text="@string/wallet_rm_title"
                     android:textColor="@color/white"
                     android:textSize="@dimen/landing_text_size_footer"
@@ -182,9 +199,9 @@
                         android:layout_marginRight="@dimen/number_five_dp"
                         android:layout_weight="1"
                         android:background="@color/orange"
-                        android:drawableLeft="@mipmap/ic_launcher_round"
+                        android:drawableLeft="@drawable/ic_right_arrow"
                         android:gravity="center"
-                        android:padding="@dimen/number_five_dp"
+                        android:padding="@dimen/number_ten_dp"
                         android:text="@string/wallet_wm_title"
                         android:textColor="@color/white"
                         android:textSize="@dimen/landing_text_size_footer"
@@ -198,9 +215,9 @@
                         android:layout_marginLeft="@dimen/number_five_dp"
                         android:layout_weight="1"
                         android:background="@color/sky"
-                        android:drawableLeft="@mipmap/ic_launcher_round"
+                        android:drawableLeft="@drawable/ic_right_arrow"
                         android:gravity="center"
-                        android:padding="@dimen/number_five_dp"
+                        android:padding="@dimen/number_ten_dp"
                         android:text="@string/wallet_dm_title"
                         android:textColor="@color/white"
                         android:textSize="@dimen/landing_text_size_footer"
