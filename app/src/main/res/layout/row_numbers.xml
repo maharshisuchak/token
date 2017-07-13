@@ -179,7 +179,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="15dp"
-            android:textSize="@dimen/landing_text_size_header"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/number_thirty_dp"
             android:textStyle="bold" />
 
         <TextView

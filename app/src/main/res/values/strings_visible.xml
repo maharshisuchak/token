@@ -105,4 +105,6 @@
 
     <string name="today_title">Today</string>
 
+    <string name="rn_dot">.</string>
+
 </resources>
