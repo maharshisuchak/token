@@ -65,7 +65,7 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
                 try {
                     if (android.util.Patterns.EMAIL_ADDRESS.matcher(ConfigCommonClass.getEditTextValue(edEmail)).matches()) {
                         edEmail.setBackground(getResources().getDrawable(R.drawable.edittext_selected_border));
-                        edEmail.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_launcher_round, 0);
+                        edEmail.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_right_tick, 0);
                     } else {
                         edEmail.setBackground(getResources().getDrawable(R.drawable.edittext_border));
                         edEmail.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
@@ -93,7 +93,7 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
                 try {
                     if (!ConfigCommonClass.getEditTextValue(edPassword).isEmpty()) {
                         edPassword.setBackground(getResources().getDrawable(R.drawable.edittext_selected_border));
-                        edPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_launcher_round, 0);
+                        edPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_right_tick, 0);
                     } else {
                         edPassword.setBackground(getResources().getDrawable(R.drawable.edittext_border));
                         edPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
@@ -121,7 +121,7 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
                 try {
                     if (comparePassword(ConfigCommonClass.getEditTextValue(edPassword), ConfigCommonClass.getEditTextValue(edRePassword))) {
                         edRePassword.setBackground(getResources().getDrawable(R.drawable.edittext_selected_border));
-                        edRePassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_launcher_round, 0);
+                        edRePassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_right_tick, 0);
                     } else {
                         edRePassword.setBackground(getResources().getDrawable(R.drawable.edittext_border));
                         edRePassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
