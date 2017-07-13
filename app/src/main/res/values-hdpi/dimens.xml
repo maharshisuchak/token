@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="toolbar_height">20dp</dimen>
+
+    <dimen name="margin_landing">20dp</dimen>
+    <dimen name="margin_left_landing">5dp</dimen>
+    <dimen name="margin_footer_landing">50dp</dimen>
+    <dimen name="margin_numbers_top">10dp</dimen>
+
+    <dimen name="number_hundred_dp">100dp</dimen>
+    <dimen name="number_fifty_dp">50dp</dimen>
+    <dimen name="number_forty_dp">40dp</dimen>
+    <dimen name="number_thirty_dp">30dp</dimen>
+    <dimen name="number_twenty_five_dp">25dp</dimen>
+    <dimen name="number_twenty_dp">20dp</dimen>
+    <dimen name="number_fifteen_dp">15dp</dimen>
+    <dimen name="number_ten_dp">10dp</dimen>
+    <dimen name="number_five_dp">5dp</dimen>
+
+    <dimen name="landing_text_size_header">20sp</dimen>
+    <dimen name="landing_text_size_footer">15sp</dimen>
+    <dimen name="landing_text_size_sign_up_two_header">14sp</dimen>
+    <dimen name="landing_text_menu_detail">10sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">120dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="nav_header_image_height">50dp</dimen>
+
+    <dimen name="spinner_icon_height">30dp</dimen>
+    <dimen name="spinner_icon_width">30dp</dimen>
+
+    <dimen name="icon_height">30dp</dimen>
+    <dimen name="icon_width">30dp</dimen>
+
+    <dimen name="image_height">100dp</dimen>
+    <dimen name="image_width">100dp</dimen>
+
+    <dimen name="barcode_height">200dp</dimen>
+    <dimen name="barcode_width">200dp</dimen>
+
+    <dimen name="tab_max_width">264dp</dimen>
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+</resources>
