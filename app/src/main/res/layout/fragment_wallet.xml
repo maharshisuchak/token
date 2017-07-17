@@ -123,12 +123,10 @@
                     android:padding="@dimen/number_five_dp">
 
                     <ImageView
-                        android:layout_width="@dimen/icon_width"
-                        android:layout_height="@dimen/icon_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/wallet_circle"
-                        android:padding="@dimen/number_ten_dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/ic_qr_code" />
+                        android:src="@mipmap/ic_qr_code" />
 
                     <TextView
                         android:layout_width="wrap_content"

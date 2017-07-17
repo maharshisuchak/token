@@ -344,7 +344,7 @@
             android:layout_width="@dimen/icon_width"
             android:layout_height="@dimen/icon_height"
             android:layerType="software"
-            android:src="@drawable/ic_menu_transfer" />
+            android:src="@mipmap/ic_settings" />
 
         <TextView
             android:id="@+id/txt_settings_title"

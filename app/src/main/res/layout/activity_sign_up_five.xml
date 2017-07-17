@@ -31,7 +31,7 @@
                 android:layout_below="@+id/sign_up_one_sign_up_back"
                 android:layout_gravity="center"
                 android:padding="5dp"
-                android:src="@drawable/ic_camera" />
+                android:src="@mipmap/ic_camera" />
 
             <TextView
                 android:id="@+id/txt_sfive_header"

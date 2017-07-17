@@ -47,7 +47,7 @@
                 android:layout_gravity="right"
                 android:layout_marginLeft="@dimen/margin_footer_landing"
                 android:layout_marginRight="@dimen/margin_footer_landing"
-                android:src="@mipmap/ic_launcher_round" />
+                android:src="@mipmap/ic_right" />
 
             <TextView
                 android:id="@+id/txt_sign_up_download"
