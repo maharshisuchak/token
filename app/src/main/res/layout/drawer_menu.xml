@@ -28,7 +28,7 @@
             android:layout_alignParentRight="true"
             android:padding="10dp"
             android:text="$780.39"
-            android:textSize="@dimen/landing_text_size_sign_up_two_header"
+            android:textSize="@dimen/landing_text_size_sign_up_two_dollar_header"
             android:textStyle="bold" />
 
     </RelativeLayout>
@@ -252,6 +252,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeDeposit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_landing"
@@ -279,6 +280,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeWithdraw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_landing"
@@ -306,6 +308,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeTransferWallet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_landing"
@@ -333,6 +336,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_landing"

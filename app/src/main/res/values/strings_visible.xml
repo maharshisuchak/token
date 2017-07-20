@@ -107,4 +107,6 @@
 
     <string name="rn_dot">.</string>
 
+    <string name="create_pin_error">Please Create 4 Digit PIN</string>
+
 </resources>

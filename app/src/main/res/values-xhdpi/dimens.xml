@@ -20,7 +20,8 @@
 
     <dimen name="landing_text_size_header">25sp</dimen>
     <dimen name="landing_text_size_footer">20sp</dimen>
-    <dimen name="landing_text_size_sign_up_two_header">17sp</dimen>
+    <dimen name="landing_text_size_sign_up_two_header">13sp</dimen>
+    <dimen name="landing_text_size_sign_up_two_dollar_header">16sp</dimen>
     <dimen name="landing_text_menu_detail">13sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>

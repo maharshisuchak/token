@@ -1,7 +1,9 @@
 package com.smartsensesolutions.token.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,10 +12,11 @@ import android.widget.Toast;
 
 import com.smartsensesolutions.token.R;
 
+@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
 public class SignUpTwo extends AppCompatActivity implements View.OnClickListener {
 
     private TextView txtContinue, txtOne, txtTwo, txtThree, txtFour, txtFive, txtSix, txtSeven, txtEight, txtNine, txtZero, actionBack, txtBottomSkip;
-    private ImageView imageIndicatorTwo, imagePinOne, imagePinTwo, imagePinThree, imagePinFour,txtBack;
+    private ImageView imageIndicatorTwo, imagePinOne, imagePinTwo, imagePinThree, imagePinFour, txtBack;
     private String strPin = "";
 
     @Override
@@ -74,7 +77,7 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txt_sign_up_continue:
-                goTo(SignUpThree.class);
+                validateCreatePin();
                 break;
             case R.id.txt_one:
                 validatePin(txtOne.getText().toString());
@@ -118,6 +121,35 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
         }
     }
 
+    public void validateCreatePin() {
+        try {
+            // User can try skip also,but if that user has been started to create pin. then show user error
+            if (strPin.length() == 0 || strPin.length() == 4) {
+                goTo(SignUpThree.class);
+            } else {
+                Toast.makeText(this, getResources().getString(R.string.create_pin_error), Toast.LENGTH_SHORT).show();
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void makeContinueButtonEnable() {
+        try {
+            if (strPin.length() == 4) {
+                txtContinue.setBackground(getResources().getDrawable(R.drawable.continue_orange_border));
+            } else {
+                txtContinue.setBackground(getResources().getDrawable(R.drawable.continue_border));
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void validatePin(String numberString) {
         try {
             if (strPin.length() >= 4) {
@@ -138,6 +170,8 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
                     imagePinFour.setImageResource(R.drawable.ic_selected_dot);
                 }
             }
+
+            makeContinueButtonEnable();
         } catch (NullPointerException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -175,6 +209,8 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
             }
             strPin = removeLastCharacter(strPin);
             Toast.makeText(this, strPin, Toast.LENGTH_SHORT).show();
+
+            makeContinueButtonEnable();
         } catch (NullPointerException e) {
             e.printStackTrace();
         } catch (Exception e) {

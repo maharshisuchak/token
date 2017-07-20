@@ -63,13 +63,15 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
             public void afterTextChanged(Editable editable) {
                 hideErrorText(txtEmailError);
                 try {
-                    if (android.util.Patterns.EMAIL_ADDRESS.matcher(ConfigCommonClass.getEditTextValue(edEmail)).matches()) {
+                    if (android.util.Patterns.EMAIL_ADDRESS.matcher(ConfigCommonClass.getEditTextValue(edEmail).trim()).matches()) {
                         edEmail.setBackground(getResources().getDrawable(R.drawable.edittext_selected_border));
-                        edEmail.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_right_tick, 0);
+                        edEmail.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_done, 0);
                     } else {
                         edEmail.setBackground(getResources().getDrawable(R.drawable.edittext_border));
                         edEmail.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                     }
+
+                    makeContinueButtonEnable();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -93,11 +95,13 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
                 try {
                     if (!ConfigCommonClass.getEditTextValue(edPassword).isEmpty()) {
                         edPassword.setBackground(getResources().getDrawable(R.drawable.edittext_selected_border));
-                        edPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_right_tick, 0);
+                        edPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_done, 0);
                     } else {
                         edPassword.setBackground(getResources().getDrawable(R.drawable.edittext_border));
                         edPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                     }
+
+                    makeContinueButtonEnable();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -121,11 +125,12 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
                 try {
                     if (comparePassword(ConfigCommonClass.getEditTextValue(edPassword), ConfigCommonClass.getEditTextValue(edRePassword))) {
                         edRePassword.setBackground(getResources().getDrawable(R.drawable.edittext_selected_border));
-                        edRePassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_right_tick, 0);
+                        edRePassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_done, 0);
                     } else {
                         edRePassword.setBackground(getResources().getDrawable(R.drawable.edittext_border));
                         edRePassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                     }
+                    makeContinueButtonEnable();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -133,6 +138,24 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
         });
 
 
+    }
+
+    public void makeContinueButtonEnable() {
+        try {
+            if (!ConfigCommonClass.getEditTextValue(edEmail).trim().isEmpty()
+                    && !ConfigCommonClass.getEditTextValue(edPassword).isEmpty()
+                    && !ConfigCommonClass.getEditTextValue(edRePassword).isEmpty()
+                    && android.util.Patterns.EMAIL_ADDRESS.matcher(ConfigCommonClass.getEditTextValue(edEmail).trim()).matches()
+                    && comparePassword(ConfigCommonClass.getEditTextValue(edPassword), ConfigCommonClass.getEditTextValue(edRePassword))) {
+                txtContinue.setBackground(getResources().getDrawable(R.drawable.continue_orange_border));
+            } else {
+                txtContinue.setBackground(getResources().getDrawable(R.drawable.continue_border));
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -155,16 +178,16 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
 
     public void validateSingUp() {
         try {
-            if (!ConfigCommonClass.getEditTextValue(edEmail).isEmpty()
+            if (!ConfigCommonClass.getEditTextValue(edEmail).trim().isEmpty()
                     && !ConfigCommonClass.getEditTextValue(edPassword).isEmpty()
                     && !ConfigCommonClass.getEditTextValue(edRePassword).isEmpty()
-                    && android.util.Patterns.EMAIL_ADDRESS.matcher(ConfigCommonClass.getEditTextValue(edEmail)).matches()
+                    && android.util.Patterns.EMAIL_ADDRESS.matcher(ConfigCommonClass.getEditTextValue(edEmail).trim()).matches()
                     && comparePassword(ConfigCommonClass.getEditTextValue(edPassword), ConfigCommonClass.getEditTextValue(edRePassword))) {
                 goTo(SignUpTwo.class);
             } else {
-                if (ConfigCommonClass.getEditTextValue(edEmail).isEmpty()) {
+                if (ConfigCommonClass.getEditTextValue(edEmail).trim().isEmpty()) {
                     popUpError(txtEmailError, getString(R.string.email_empty_error));
-                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(ConfigCommonClass.getEditTextValue(edEmail)).matches()) {
+                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(ConfigCommonClass.getEditTextValue(edEmail).trim()).matches()) {
                     popUpError(txtEmailError, getString(R.string.email_valid_error));
                 }
                 if (ConfigCommonClass.getEditTextValue(edPassword).isEmpty()) {

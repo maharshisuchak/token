@@ -1,5 +1,6 @@
 package com.smartsensesolutions.token.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -19,7 +20,7 @@ import com.smartsensesolutions.token.fragments.Dashboard;
 public class Menus extends AppCompatActivity
         implements View.OnClickListener {
 
-    private RelativeLayout relativeSendMoney;
+    private RelativeLayout relativeSendMoney, relativeRequestMoney, relativeDeposit, relativeWithdraw, relativeTransferWallet, relativeSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,18 @@ public class Menus extends AppCompatActivity
 
     public void initializeControls() {
         relativeSendMoney = (RelativeLayout) findViewById(R.id.relativeSendMoney);
+        relativeRequestMoney = (RelativeLayout) findViewById(R.id.relativeRequestMoney);
+        relativeDeposit = (RelativeLayout) findViewById(R.id.relativeDeposit);
+        relativeWithdraw = (RelativeLayout) findViewById(R.id.relativeWithdraw);
+        relativeTransferWallet = (RelativeLayout) findViewById(R.id.relativeTransferWallet);
+        relativeSettings = (RelativeLayout) findViewById(R.id.relativeSettings);
+
         relativeSendMoney.setOnClickListener(this);
+        relativeRequestMoney.setOnClickListener(this);
+        relativeDeposit.setOnClickListener(this);
+        relativeWithdraw.setOnClickListener(this);
+        relativeTransferWallet.setOnClickListener(this);
+        relativeSettings.setOnClickListener(this);
     }
 
     @Override
@@ -59,7 +71,27 @@ public class Menus extends AppCompatActivity
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.relativeSendMoney:
-                Toast.makeText(this, "send money yes", Toast.LENGTH_SHORT).show();
+                goTo(SendMoney.class);
+                closeDrawer();
+                break;
+            case R.id.relativeRequestMoney:
+                goTo(ReceiveMoney.class);
+                closeDrawer();
+                break;
+            case R.id.relativeDeposit:
+                Toast.makeText(this, "Deposit", Toast.LENGTH_SHORT).show();
+                closeDrawer();
+                break;
+            case R.id.relativeWithdraw:
+                Toast.makeText(this, "Withdraw", Toast.LENGTH_SHORT).show();
+                closeDrawer();
+                break;
+            case R.id.relativeTransferWallet:
+                goTo(TransferMyWallet.class);
+                closeDrawer();
+                break;
+            case R.id.relativeSettings:
+                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
                 closeDrawer();
                 break;
         }
@@ -79,6 +111,16 @@ public class Menus extends AppCompatActivity
             }
         } catch (NullPointerException e) {
             e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goTo(Class targetClass) {
+        try {
+            Intent intent = new Intent(Menus.this, targetClass);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }
