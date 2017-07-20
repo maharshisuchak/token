@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:orientation="vertical"
     tools:context="com.smartsensesolutions.token.activity.SignUpOne">
 
@@ -50,7 +51,7 @@
             <EditText
                 android:id="@+id/ed_email"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/txt_landing_header"
                 android:layout_marginBottom="@dimen/number_ten_dp"
                 android:layout_marginLeft="@dimen/number_twenty_dp"
@@ -76,7 +77,7 @@
             <EditText
                 android:id="@+id/ed_password"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/ed_email"
                 android:layout_marginBottom="@dimen/number_ten_dp"
                 android:layout_marginLeft="@dimen/number_twenty_dp"
@@ -102,7 +103,7 @@
             <EditText
                 android:id="@+id/ed_repeat_password"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/ed_password"
                 android:layout_marginBottom="@dimen/number_ten_dp"
                 android:layout_marginLeft="@dimen/number_twenty_dp"

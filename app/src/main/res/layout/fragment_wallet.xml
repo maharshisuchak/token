@@ -10,7 +10,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/linearWallet"
+            android:id="@+id/linearWalletMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -20,7 +20,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/linearFooterWallet"
-                android:layout_alignParentTop="true">
+                android:layout_alignParentTop="true"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/linearWallet"
@@ -145,6 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
