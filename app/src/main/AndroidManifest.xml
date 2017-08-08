@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SignUpOne" />
+        <activity
+            android:name=".activity.SignUpOne"
+            android:windowSoftInputMode="adjustNothing" />
         <activity android:name=".activity.SignUpTwo" />
         <activity android:name=".activity.SignUpThree" />
         <activity android:name=".activity.SignUpFour" />
@@ -31,6 +33,7 @@
         <activity android:name=".activity.TransferMyWallet" />
         <activity android:name=".activity.EnterAmount" />
         <activity android:name=".activity.TokenSendingDetails"></activity>
+        <activity android:name=".activity.Dashboard"></activity>
     </application>
 
 </manifest>

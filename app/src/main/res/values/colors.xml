@@ -14,5 +14,7 @@
     <color name="error_text">#c74c50</color>
     <color name="yellow">#edd051</color>
     <color name="red">#c74c50</color>
+    <color name="dark_grey">#525252</color>
+    <color name="light_grey">#adadad</color>
 
 </resources>

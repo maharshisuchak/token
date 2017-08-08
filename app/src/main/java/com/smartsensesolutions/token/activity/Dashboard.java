@@ -1,36 +1,34 @@
-package com.smartsensesolutions.token.fragments;
+package com.smartsensesolutions.token.activity;
 
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.support.v7.app.AppCompatActivity;
 
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.adapters.DashboardAdapter;
 import com.smartsensesolutions.token.config.ConfigCommonStrings;
+import com.smartsensesolutions.token.fragments.Transaction;
+import com.smartsensesolutions.token.fragments.Wallet;
 
-public class Dashboard extends Fragment {
+public class Dashboard extends AppCompatActivity {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_dashboard, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dashboard);
 
-        initializeControls(rootView);
-
-        return rootView;
+        initializeControls();
     }
 
-    public void initializeControls(View rootView) {
+    public void initializeControls() {
         try {
-            viewPager = (ViewPager) rootView.findViewById(R.id.viewpager);
-            tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
+            viewPager = (ViewPager) findViewById(R.id.viewpager);
+            tabLayout = (TabLayout) findViewById(R.id.tabs);
 
             setupViewPager(viewPager);
             tabLayout.setupWithViewPager(viewPager);
@@ -45,8 +43,8 @@ public class Dashboard extends Fragment {
 
     public void getIntentValue() {
         try {
-            if (getActivity().getIntent() != null) {
-                if (getActivity().getIntent().hasExtra(ConfigCommonStrings.KEY_INTENT_FROM_TOKEN_SENDING)) {
+            if (getIntent() != null) {
+                if (getIntent().hasExtra(ConfigCommonStrings.KEY_INTENT_FROM_TOKEN_SENDING)) {
                     viewPager.setCurrentItem(2);
                 }
             }
@@ -58,9 +56,15 @@ public class Dashboard extends Fragment {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        DashboardAdapter adapter = new DashboardAdapter(getActivity().getSupportFragmentManager());
+        DashboardAdapter adapter = new DashboardAdapter(getSupportFragmentManager());
         adapter.addFragment(new Wallet(), getString(R.string.tab_wallet_title));
         adapter.addFragment(new Transaction(), getString(R.string.tab_transaction_title));
         viewPager.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

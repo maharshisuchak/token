@@ -3,6 +3,15 @@
 
     <dimen name="toolbar_height">20dp</dimen>
 
+    <dimen name="so_hello_mt">20dp</dimen>
+    <dimen name="so_title_mt">20dp</dimen>
+    <dimen name="so_if_mt">20dp</dimen>
+    <dimen name="so_ed_mt">5dp</dimen>
+    <dimen name="so_tv_mt">20dp</dimen>
+
+    <dimen name="st_title_mt">20dp</dimen>
+    <dimen name="st_dot_mt">20dp</dimen>
+
     <dimen name="margin_landing">20dp</dimen>
     <dimen name="margin_left_landing">5dp</dimen>
     <dimen name="margin_footer_landing">50dp</dimen>
@@ -18,7 +27,7 @@
     <dimen name="number_ten_dp">10dp</dimen>
     <dimen name="number_five_dp">5dp</dimen>
 
-    <dimen name="landing_text_size_header">25sp</dimen>
+    <dimen name="landing_text_size_header">18sp</dimen>
     <dimen name="landing_text_size_footer">20sp</dimen>
     <dimen name="landing_text_size_sign_up_two_header">12sp</dimen>
     <dimen name="landing_text_size_sign_up_two_dollar_header">15sp</dimen>

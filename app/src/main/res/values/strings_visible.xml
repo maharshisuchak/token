@@ -72,6 +72,14 @@
     <string name="wallet_wm_title">Withdraw</string>
     <string name="wallet_dm_title">Deposit</string>
 
+    <string name="wallet_hbs_title">Hide Balances</string>
+    <string name="wallet_mb_title">My Balance</string>
+
+
+    <string name="send_title">Send</string>
+    <string name="request_title">Request</string>
+    <string name="deposit_title">Deposit</string>
+    <string name="withdraw_title">Withdraw</string>
 
     <string name="sm_sm_title">SEND MONEY</string>
     <string name="rm_rm_title">RECEIVE MONEY</string>
@@ -89,6 +97,13 @@
 
     <string name="enter_amount_sending">Sending to:</string>
     <string name="sending_detail_sending">Sending</string>
+
+
+    <string name="bc_spending">Bitcoin Spending</string>
+    <string name="bc_savings">Bitcoin Savings</string>
+    <string name="lc_spending">Litcoin Spending</string>
+    <string name="lc_savings">Litecoin Savings</string>
+
 
     <string name="ts_from_title">From:</string>
     <string name="ts_to_title">To:</string>

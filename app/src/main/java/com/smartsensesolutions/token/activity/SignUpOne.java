@@ -218,7 +218,7 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
 
     public void hideErrorText(TextView textView) {
         try {
-            textView.setVisibility(View.GONE);
+            textView.setVisibility(View.INVISIBLE);
         } catch (NullPointerException e) {
             e.printStackTrace();
         } catch (Exception e) {

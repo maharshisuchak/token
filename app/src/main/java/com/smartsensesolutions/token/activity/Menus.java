@@ -15,10 +15,9 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.smartsensesolutions.token.R;
-import com.smartsensesolutions.token.fragments.Dashboard;
+import com.smartsensesolutions.token.fragments.NewDashboard;
 
-public class Menus extends AppCompatActivity
-        implements View.OnClickListener {
+public class Menus extends AppCompatActivity implements View.OnClickListener {
 
     private RelativeLayout relativeSendMoney, relativeRequestMoney, relativeDeposit, relativeWithdraw, relativeTransferWallet, relativeSettings;
 
@@ -99,7 +98,7 @@ public class Menus extends AppCompatActivity
 
     public void goToFragment() {
         try {
-            Fragment fragment = new Dashboard();
+            Fragment fragment = new NewDashboard();
             if (fragment != null) {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction()
