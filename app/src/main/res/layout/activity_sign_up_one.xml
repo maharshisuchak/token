@@ -19,15 +19,17 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="@dimen/number_five_dp"
-            android:textColor="@android:color/darker_gray"
             android:drawableLeft="@drawable/ic_left_slim_arrow"
             android:gravity="center"
-            android:text="@string/landing_signin_title" />
+            android:padding="@dimen/number_five_dp"
+            android:text="@string/landing_signin_title"
+            android:textColor="@android:color/darker_gray" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/signup_bottom">
+            android:layout_above="@+id/signup_bottom"
+            android:layout_below="@+id/sign_up_one_sign_up_back">
 
             <LinearLayout
                 android:layout_width="match_parent"
