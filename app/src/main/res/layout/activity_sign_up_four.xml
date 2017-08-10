@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,23 +7,30 @@
     android:orientation="vertical"
     tools:context="com.smartsensesolutions.token.activity.SignUpFour">
 
+
+    <TextView
+        android:id="@+id/sign_up_one_sign_up_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/number_five_dp"
+        android:drawableLeft="@drawable/ic_left_slim_arrow"
+        android:gravity="center"
+        android:text="@string/landing_signup_title" />
+
+
     <ScrollView
+        android:id="@+id/scrollSignUpTwo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/signup_bottom"
+        android:layout_below="@+id/sign_up_one_sign_up_back">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/sign_up_one_sign_up_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/number_five_dp"
-                android:drawableLeft="@drawable/ic_left_slim_arrow"
-                android:gravity="center"
-                android:text="@string/landing_signup_title" />
 
             <TextView
                 android:id="@+id/txt_landing_header"
@@ -72,15 +79,18 @@
                 android:layout_marginBottom="@dimen/margin_landing"
                 android:layout_marginTop="@dimen/margin_landing"
                 android:text="@string/skip_title"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/landing_text_size_sign_up_two_header" />
 
-            <include
-                android:id="@+id/signup_bottom"
-                layout="@layout/sign_up_bottom"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+    <include
+        android:id="@+id/signup_bottom"
+        layout="@layout/sign_up_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

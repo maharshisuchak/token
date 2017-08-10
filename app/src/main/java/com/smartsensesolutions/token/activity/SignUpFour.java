@@ -24,7 +24,7 @@ public class SignUpFour extends AppCompatActivity implements View.OnClickListene
     public void initializeControls() {
         txtContinue = (TextView) findViewById(R.id.txt_sign_up_continue);
         imageIndicatorThree = (ImageView) findViewById(R.id.img_indicator_three);
-        imageIndicatorThree.setImageResource(R.drawable.ic_selected_dot);
+        imageIndicatorThree.setImageResource(R.drawable.ic_grey_selected_dot);
         actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
         txtBottomBack = (TextView) findViewById(R.id.txt_bottom_back);
         txtBottomBack.setVisibility(View.VISIBLE);

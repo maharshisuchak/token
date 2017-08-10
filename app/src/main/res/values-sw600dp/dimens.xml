@@ -12,10 +12,12 @@
     <dimen name="st_title_mt">20dp</dimen>
     <dimen name="st_dot_mt">20dp</dimen>
 
+    <dimen name="sthree_dot_mt">80dp</dimen>
+
     <dimen name="margin_landing">20dp</dimen>
     <dimen name="margin_left_landing">5dp</dimen>
     <dimen name="margin_footer_landing">50dp</dimen>
-    <dimen name="margin_numbers_top">10dp</dimen>
+    <dimen name="margin_numbers_top">20dp</dimen>
 
     <dimen name="number_hundred_dp">100dp</dimen>
     <dimen name="number_fifty_dp">50dp</dimen>
@@ -39,6 +41,8 @@
     <dimen name="nav_header_height">120dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="nav_header_image_height">50dp</dimen>
+
+    <dimen name="hb_ts">20dp</dimen>
 
     <dimen name="spinner_icon_height">30dp</dimen>
     <dimen name="spinner_icon_width">30dp</dimen>

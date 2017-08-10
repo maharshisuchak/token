@@ -24,7 +24,7 @@ public class SignUpSix extends AppCompatActivity implements View.OnClickListener
     public void initializeControls() {
         txtContinue = (TextView) findViewById(R.id.txt_sign_up_continue);
         imageIndicatorFive = (ImageView) findViewById(R.id.img_indicator_five);
-        imageIndicatorFive.setImageResource(R.drawable.ic_selected_dot);
+        imageIndicatorFive.setImageResource(R.drawable.ic_grey_selected_dot);
         actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
         txtContinue.setBackground(getResources().getDrawable(R.drawable.continue_orange_border));
         txtContinue.setOnClickListener(this);

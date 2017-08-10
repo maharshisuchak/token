@@ -49,7 +49,7 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
         imagePinFour = (ImageView) findViewById(R.id.img_pin_four);
 
         imageIndicatorTwo = (ImageView) findViewById(R.id.img_indicator_two);
-        imageIndicatorTwo.setImageResource(R.drawable.ic_selected_dot);
+        imageIndicatorTwo.setImageResource(R.drawable.ic_grey_selected_dot);
 
         txtContinue.setOnClickListener(this);
         txtOne.setOnClickListener(this);

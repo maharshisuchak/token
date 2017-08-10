@@ -24,12 +24,6 @@
             android:text="@string/landing_signup_title"
             android:textColor="@android:color/darker_gray" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:src="@mipmap/ic_launcher_round" />
-
     </RelativeLayout>
 
     <ScrollView

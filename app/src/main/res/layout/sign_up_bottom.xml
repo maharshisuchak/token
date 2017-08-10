@@ -20,35 +20,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+            android:src="@drawable/ic_grey_default_dot" />
 
         <ImageView
             android:id="@+id/img_indicator_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+            android:src="@drawable/ic_grey_default_dot" />
 
         <ImageView
             android:id="@+id/img_indicator_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+            android:src="@drawable/ic_grey_default_dot" />
 
         <ImageView
             android:id="@+id/img_indicator_four"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+            android:src="@drawable/ic_grey_default_dot" />
 
         <ImageView
             android:id="@+id/img_indicator_five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_default_dot" />
+            android:src="@drawable/ic_grey_default_dot" />
     </LinearLayout>
 
     <TextView
@@ -83,7 +83,7 @@
             android:layout_weight="1"
             android:gravity="left"
             android:text="@string/back_title"
-            android:textColor="@color/gray_text"
+            android:textColor="@android:color/darker_gray"
             android:visibility="invisible" />
 
         <ImageView

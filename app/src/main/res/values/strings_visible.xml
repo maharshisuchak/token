@@ -6,6 +6,7 @@
     <string name="landing_signup_title">Sign Up</string>
     <string name="landing_signin_title">Sign In</string>
     <string name="landing_signin_extra_title">Already have an account?</string>
+    <string name="landing_bitcoin_title">Bitcoin Spending Wallet</string>
 
     <string name="hello_title">Hello!</string>
     <string name="sing_up_title">First, let\'s set you up with a token  account.</string>
@@ -22,6 +23,8 @@
     <string name="skip_title">Skip</string>
     <string name="back_title">Back</string>
     <string name="scan_title">Scan</string>
+
+    <string name="wallet_setting_title">Wallet Settings</string>
 
     <string name="sign_up_three_verify_pin_title">Now, please verify your PIN:</string>
 

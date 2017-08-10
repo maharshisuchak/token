@@ -40,7 +40,7 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
         txtPasswordError = (TextView) findViewById(R.id.txt_password_error);
         txtRePasswordError = (TextView) findViewById(R.id.txt_re_password_error);
         imageIndicatorOne = (ImageView) findViewById(R.id.img_indicator_one);
-        imageIndicatorOne.setImageResource(R.drawable.ic_selected_dot);
+        imageIndicatorOne.setImageResource(R.drawable.ic_grey_selected_dot);
         actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
 
         actionBack.setOnClickListener(this);
