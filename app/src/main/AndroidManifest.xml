@@ -9,10 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
-        <activity
-            android:name=".activity.Menus"
-            android:label="@string/title_activity_menus"
-            android:theme="@style/AppTheme">
+        <activity android:name=".activity.Landing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +24,10 @@
         <activity android:name=".activity.SignUpFour" />
         <activity android:name=".activity.SignUpFive" />
         <activity android:name=".activity.SignUpSix" />
-        <activity android:name=".activity.Landing" />
+        <activity
+            android:name=".activity.Menus"
+            android:label="@string/title_activity_menus"
+            android:theme="@style/AppTheme" />
         <activity android:name=".activity.SendMoney" />
         <activity android:name=".activity.ReceiveMoney" />
         <activity android:name=".activity.TransferMyWallet" />

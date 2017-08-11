@@ -78,7 +78,10 @@
             android:layout_width="@dimen/icon_width"
             android:layout_height="@dimen/icon_height"
             android:layerType="software"
-            android:src="@drawable/ic_bitcoin" />
+            android:src="@drawable/ic_bitcoin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:id="@+id/txt_spending_wallet_title"

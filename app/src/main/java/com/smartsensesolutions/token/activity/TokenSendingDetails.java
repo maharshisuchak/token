@@ -47,7 +47,7 @@ public class TokenSendingDetails extends AppCompatActivity implements View.OnCli
                 onBackPressed();
                 break;
             case R.id.txt_send:
-                goTo(Menus.class);
+                goTo(Dashboard.class);
                 break;
         }
     }
@@ -56,7 +56,6 @@ public class TokenSendingDetails extends AppCompatActivity implements View.OnCli
         try {
             Intent intent = new Intent(TokenSendingDetails.this, targetClass);
             intent.putExtra(ConfigCommonStrings.KEY_INTENT_FROM_TOKEN_SENDING, ConfigCommonStrings.VALUE_INTENT_FROM_TOKEN_SENDING);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {

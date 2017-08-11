@@ -30,10 +30,10 @@
     <dimen name="number_five_dp">5dp</dimen>
 
     <dimen name="landing_text_size_header">20sp</dimen>
-    <dimen name="landing_text_size_footer">20sp</dimen>
-    <dimen name="landing_text_size_sign_up_two_header">16sp</dimen>
+    <dimen name="landing_text_size_footer">17sp</dimen>
+    <dimen name="landing_text_size_sign_up_two_header">14sp</dimen>
     <dimen name="landing_text_size_sign_up_two_dollar_header">16sp</dimen>
-    <dimen name="landing_text_menu_detail">13sp</dimen>
+    <dimen name="landing_text_menu_detail">11sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -44,14 +44,28 @@
 
     <dimen name="hb_ts">20dp</dimen>
 
+    <dimen name="dash_email_ts">12sp</dimen>
+    <dimen name="dash_balance_ts">16sp</dimen>
+    <dimen name="dash_dollar_sign_ts">35sp</dimen>
+    <dimen name="dash_dollar_amt_ts">50sp</dimen>
+    <dimen name="dash_dollar_amt_extra_ts">35sp</dimen>
+    <dimen name="dash_money_ts">15sp</dimen>
+    <dimen name="dash_hide_balance_ts">13sp</dimen>
+    <dimen name="dash_icon_height">30dp</dimen>
+    <dimen name="dash_icon_width">30dp</dimen>
+    <dimen name="dash_footer_icon_height">35dp</dimen>
+    <dimen name="dash_footer_icon_width">35dp</dimen>
+    <dimen name="dash_bitcoin_ts">13sp</dimen>
+
+
     <dimen name="spinner_icon_height">30dp</dimen>
     <dimen name="spinner_icon_width">30dp</dimen>
 
-    <dimen name="icon_height">50dp</dimen>
-    <dimen name="icon_width">50dp</dimen>
+    <dimen name="icon_height">45dp</dimen>
+    <dimen name="icon_width">45dp</dimen>
 
-    <dimen name="image_height">100dp</dimen>
-    <dimen name="image_width">100dp</dimen>
+    <dimen name="image_height">70dp</dimen>
+    <dimen name="image_width">70dp</dimen>
 
     <dimen name="barcode_height">200dp</dimen>
     <dimen name="barcode_width">200dp</dimen>

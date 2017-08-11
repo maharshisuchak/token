@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.adapters.DashboardAdapter;
@@ -70,27 +66,6 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         adapter.addFragment(new Wallet(), getString(R.string.tab_wallet_title));
         adapter.addFragment(new Transaction(), getString(R.string.tab_transaction_title));
         viewPager.setAdapter(adapter);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menus, menu);
-        // return true so that the menu pop up is opened
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.action_scan_barcode:
-                Toast.makeText(Dashboard.this, "Scan Barcode!", Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 
     @Override
