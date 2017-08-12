@@ -3,8 +3,10 @@ package com.smartsensesolutions.token.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,6 +28,7 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
     private LinearLayout linearBCSpending, linearBCSavings, linearLCSpending, linearLCSavings,
             linearSend, linearRequest, linearDeposit, linearWithdraw;
     private TextView text_bc_spending_money, text_bc_savings_money, text_lc_spending_money, text_lc_savings_money;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
         text_bc_savings_money = (TextView) rootView.findViewById(R.id.text_bc_savings_money);
         text_lc_spending_money = (TextView) rootView.findViewById(R.id.text_lc_spending_money);
         text_lc_savings_money = (TextView) rootView.findViewById(R.id.text_lc_savings_money);
+        swipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeRefresh);
 
         linearSend = (LinearLayout) rootView.findViewById(R.id.linearSend);
         linearRequest = (LinearLayout) rootView.findViewById(R.id.linearRequest);
@@ -71,6 +75,22 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
         text_bc_savings_money.setText(Html.fromHtml("<small><sup>$</sup></small>" + 0 + "<small><sup>00</sup></small>"));
         text_lc_spending_money.setText(Html.fromHtml("<small><sup>$</sup></small>" + 0 + "<small><sup>00</sup></small>"));
         text_lc_savings_money.setText(Html.fromHtml("<small><sup>$</sup></small>" + 0 + "<small><sup>00</sup></small>"));
+
+
+        swipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        Toast.makeText(getActivity(), "Refresh Dashboard!", Toast.LENGTH_SHORT).show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                swipeRefreshLayout.setRefreshing(false);
+                            }
+                        }, 3000);
+                    }
+                }
+        );
 
     }
 
