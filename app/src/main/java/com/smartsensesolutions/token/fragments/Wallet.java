@@ -9,6 +9,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -24,7 +25,7 @@ public class Wallet extends Fragment implements View.OnClickListener {
     private TextView txtSendMoney, txtRequestMoney;
     private SwipeRefreshLayout swipeRefreshLayout;
     private ScrollView scrollView;
-    private RelativeLayout relativeFragmentWallet;
+    private LinearLayout relativeFragmentWallet;
 
 
     public Wallet() {
@@ -51,7 +52,7 @@ public class Wallet extends Fragment implements View.OnClickListener {
         txtRequestMoney = (TextView) rootView.findViewById(R.id.txt_wallet_request_money);
         swipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeRefresh);
         scrollView = (ScrollView) rootView.findViewById(R.id.scrollFooterWallet);
-        relativeFragmentWallet = (RelativeLayout) rootView.findViewById(R.id.relativeFragmentWallet);
+        relativeFragmentWallet = (LinearLayout) rootView.findViewById(R.id.relativeFragmentWallet);
         txtSendMoney.setOnClickListener(this);
         txtRequestMoney.setOnClickListener(this);
 

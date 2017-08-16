@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -143,192 +144,229 @@
                         android:layout_height="0.5dp"
                         android:background="@color/dark_grey" />
 
-                    <LinearLayout
-                        android:id="@+id/linear_bc_spending"
+                    <com.andexert.library.RippleView
+                        android:id="@+id/rippleBCSpending"
+                        rv_centered="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingBottom="@dimen/number_ten_dp"
-                        android:paddingLeft="@dimen/number_ten_dp"
-                        android:paddingRight="@dimen/number_ten_dp"
-                        android:paddingTop="@dimen/number_ten_dp">
+                        app:rv_color="@color/orange"
+                        app:rv_rippleDuration="100">
 
-                        <ImageView
-                            android:id="@+id/image_bc_spending"
-                            android:layout_width="@dimen/dash_icon_width"
-                            android:layout_height="@dimen/dash_icon_height"
-                            android:gravity="right"
-                            android:src="@drawable/ic_bitcoin" />
 
-                        <TextView
-                            android:id="@+id/text_bc_spending_title"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/linear_bc_spending"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/number_ten_dp"
-                            android:layout_weight="1"
-                            android:text="@string/bc_spending"
-                            android:textColor="@color/gray_text"
-                            android:textSize="@dimen/landing_text_size_sign_up_two_header" />
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/number_ten_dp"
+                            android:paddingLeft="@dimen/number_ten_dp"
+                            android:paddingRight="@dimen/number_ten_dp"
+                            android:paddingTop="@dimen/number_ten_dp">
+
+                            <ImageView
+                                android:id="@+id/image_bc_spending"
+                                android:layout_width="@dimen/dash_icon_width"
+                                android:layout_height="@dimen/dash_icon_height"
+                                android:gravity="right"
+                                android:src="@drawable/ic_bitcoin" />
+
+                            <TextView
+                                android:id="@+id/text_bc_spending_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/number_ten_dp"
+                                android:layout_weight="1"
+                                android:text="@string/bc_spending"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/landing_text_size_sign_up_two_header" />
 
 
-                        <TextView
-                            android:id="@+id/text_bc_spending_money"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="0"
-                            android:textColor="@color/gray_text"
-                            android:textSize="@dimen/landing_text_size_sign_up_two_header"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/text_bc_spending_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="0"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/landing_text_size_sign_up_two_header"
+                                android:textStyle="bold" />
 
-                    </LinearLayout>
+                        </LinearLayout>
+                    </com.andexert.library.RippleView>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:background="@color/dark_grey" />
 
-                    <LinearLayout
-                        android:id="@+id/linear_bc_savings"
+                    <com.andexert.library.RippleView
+                        android:id="@+id/rippleBCSavings"
+                        rv_centered="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingBottom="@dimen/number_ten_dp"
-                        android:paddingLeft="@dimen/number_ten_dp"
-                        android:paddingRight="@dimen/number_ten_dp"
-                        android:paddingTop="@dimen/number_ten_dp">
+                        app:rv_color="@color/orange"
+                        app:rv_rippleDuration="100">
 
-                        <ImageView
-                            android:id="@+id/image_bc_savings"
-                            android:layout_width="@dimen/dash_icon_width"
-                            android:layout_height="@dimen/dash_icon_height"
-                            android:gravity="right"
-                            android:src="@drawable/ic_bitcoin" />
-
-                        <TextView
-                            android:id="@+id/text_bc_savings_title"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/linear_bc_savings"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/number_ten_dp"
-                            android:layout_weight="1"
-                            android:text="@string/bc_savings"
-                            android:textColor="@color/gray_text"
-                            android:textSize="@dimen/landing_text_size_sign_up_two_header" />
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/number_ten_dp"
+                            android:paddingLeft="@dimen/number_ten_dp"
+                            android:paddingRight="@dimen/number_ten_dp"
+                            android:paddingTop="@dimen/number_ten_dp">
+
+                            <ImageView
+                                android:id="@+id/image_bc_savings"
+                                android:layout_width="@dimen/dash_icon_width"
+                                android:layout_height="@dimen/dash_icon_height"
+                                android:gravity="right"
+                                android:src="@drawable/ic_bitcoin" />
+
+                            <TextView
+                                android:id="@+id/text_bc_savings_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/number_ten_dp"
+                                android:layout_weight="1"
+                                android:text="@string/bc_savings"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/landing_text_size_sign_up_two_header" />
 
 
-                        <TextView
-                            android:id="@+id/text_bc_savings_money"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="0"
-                            android:textColor="@color/gray_text"
-                            android:textSize="@dimen/landing_text_size_sign_up_two_header"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/text_bc_savings_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="0"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/landing_text_size_sign_up_two_header"
+                                android:textStyle="bold" />
 
-                    </LinearLayout>
+                        </LinearLayout>
+                    </com.andexert.library.RippleView>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:background="@color/dark_grey" />
 
-                    <LinearLayout
-                        android:id="@+id/linear_lc_spending"
+                    <com.andexert.library.RippleView
+                        android:id="@+id/rippleLCSpending"
+                        rv_centered="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingBottom="@dimen/number_ten_dp"
-                        android:paddingLeft="@dimen/number_ten_dp"
-                        android:paddingRight="@dimen/number_ten_dp"
-                        android:paddingTop="@dimen/number_ten_dp">
+                        app:rv_color="@color/orange"
+                        app:rv_rippleDuration="100">
 
-                        <ImageView
-                            android:id="@+id/image_lc_spending"
-                            android:layout_width="@dimen/dash_icon_width"
-                            android:layout_height="@dimen/dash_icon_height"
-                            android:gravity="right"
-                            android:src="@drawable/ic_bitcoin" />
-
-                        <TextView
-                            android:id="@+id/text_lc_spending_title"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/linear_lc_spending"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/number_ten_dp"
-                            android:layout_weight="1"
-                            android:text="@string/lc_spending"
-                            android:textColor="@color/gray_text"
-                            android:textSize="@dimen/landing_text_size_sign_up_two_header" />
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/number_ten_dp"
+                            android:paddingLeft="@dimen/number_ten_dp"
+                            android:paddingRight="@dimen/number_ten_dp"
+                            android:paddingTop="@dimen/number_ten_dp">
+
+                            <ImageView
+                                android:id="@+id/image_lc_spending"
+                                android:layout_width="@dimen/dash_icon_width"
+                                android:layout_height="@dimen/dash_icon_height"
+                                android:gravity="right"
+                                android:src="@drawable/ic_bitcoin" />
+
+                            <TextView
+                                android:id="@+id/text_lc_spending_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/number_ten_dp"
+                                android:layout_weight="1"
+                                android:text="@string/lc_spending"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/landing_text_size_sign_up_two_header" />
 
 
-                        <TextView
-                            android:id="@+id/text_lc_spending_money"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="0"
-                            android:textColor="@color/gray_text"
-                            android:textSize="@dimen/landing_text_size_sign_up_two_header"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/text_lc_spending_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="0"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/landing_text_size_sign_up_two_header"
+                                android:textStyle="bold" />
 
-                    </LinearLayout>
+                        </LinearLayout>
+                    </com.andexert.library.RippleView>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:background="@color/dark_grey" />
 
-                    <LinearLayout
-                        android:id="@+id/linear_lc_savings"
+                    <com.andexert.library.RippleView
+                        android:id="@+id/rippleLCSavings"
+                        rv_centered="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingBottom="@dimen/number_ten_dp"
-                        android:paddingLeft="@dimen/number_ten_dp"
-                        android:paddingRight="@dimen/number_ten_dp"
-                        android:paddingTop="@dimen/number_ten_dp">
+                        app:rv_color="@color/orange"
+                        app:rv_rippleDuration="100">
 
-                        <ImageView
-                            android:id="@+id/image_lc_savings"
-                            android:layout_width="@dimen/dash_icon_width"
-                            android:layout_height="@dimen/dash_icon_height"
-                            android:gravity="right"
-                            android:src="@drawable/ic_bitcoin" />
-
-                        <TextView
-                            android:id="@+id/text_lc_savings_title"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/linear_lc_savings"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/number_ten_dp"
-                            android:layout_weight="1"
-                            android:text="@string/lc_savings"
-                            android:textColor="@color/gray_text"
-                            android:textSize="@dimen/landing_text_size_sign_up_two_header" />
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/number_ten_dp"
+                            android:paddingLeft="@dimen/number_ten_dp"
+                            android:paddingRight="@dimen/number_ten_dp"
+                            android:paddingTop="@dimen/number_ten_dp">
+
+                            <ImageView
+                                android:id="@+id/image_lc_savings"
+                                android:layout_width="@dimen/dash_icon_width"
+                                android:layout_height="@dimen/dash_icon_height"
+                                android:gravity="right"
+                                android:src="@drawable/ic_bitcoin" />
+
+                            <TextView
+                                android:id="@+id/text_lc_savings_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/number_ten_dp"
+                                android:layout_weight="1"
+                                android:text="@string/lc_savings"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/landing_text_size_sign_up_two_header" />
 
 
-                        <TextView
-                            android:id="@+id/text_lc_savings_money"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="0"
-                            android:textColor="@color/gray_text"
-                            android:textSize="@dimen/landing_text_size_sign_up_two_header"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/text_lc_savings_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="0"
+                                android:textColor="@color/gray_text"
+                                android:textSize="@dimen/landing_text_size_sign_up_two_header"
+                                android:textStyle="bold" />
 
-                    </LinearLayout>
+                        </LinearLayout>
+                    </com.andexert.library.RippleView>
 
                     <View
                         android:layout_width="match_parent"

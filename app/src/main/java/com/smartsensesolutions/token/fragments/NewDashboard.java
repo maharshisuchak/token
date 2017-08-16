@@ -18,17 +18,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.andexert.library.RippleView;
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.activity.Dashboard;
 import com.smartsensesolutions.token.activity.ReceiveMoney;
 import com.smartsensesolutions.token.activity.SendMoney;
 
-public class NewDashboard extends Fragment implements View.OnClickListener {
+public class NewDashboard extends Fragment implements View.OnClickListener, RippleView.OnRippleCompleteListener {
 
-    private LinearLayout linearBCSpending, linearBCSavings, linearLCSpending, linearLCSavings,
-            linearSend, linearRequest, linearDeposit, linearWithdraw;
+    private LinearLayout linearSend, linearRequest, linearDeposit, linearWithdraw;
     private TextView text_bc_spending_money, text_bc_savings_money, text_lc_spending_money, text_lc_savings_money;
     private SwipeRefreshLayout swipeRefreshLayout;
+    private RippleView rippleViewBCSpending, rippleViewBCSavings, rippleViewLCSpending, rippleViewLCSavings;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,10 +47,10 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
     }
 
     public void initializeControls(View rootView) {
-        linearBCSpending = (LinearLayout) rootView.findViewById(R.id.linear_bc_spending);
-        linearBCSavings = (LinearLayout) rootView.findViewById(R.id.linear_bc_savings);
-        linearLCSpending = (LinearLayout) rootView.findViewById(R.id.linear_lc_spending);
-        linearLCSavings = (LinearLayout) rootView.findViewById(R.id.linear_lc_savings);
+        rippleViewBCSpending = (RippleView) rootView.findViewById(R.id.rippleBCSpending);
+        rippleViewBCSavings = (RippleView) rootView.findViewById(R.id.rippleBCSavings);
+        rippleViewLCSpending = (RippleView) rootView.findViewById(R.id.rippleLCSpending);
+        rippleViewLCSavings = (RippleView) rootView.findViewById(R.id.rippleLCSavings);
         text_bc_spending_money = (TextView) rootView.findViewById(R.id.text_bc_spending_money);
         text_bc_savings_money = (TextView) rootView.findViewById(R.id.text_bc_savings_money);
         text_lc_spending_money = (TextView) rootView.findViewById(R.id.text_lc_spending_money);
@@ -61,10 +62,10 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
         linearDeposit = (LinearLayout) rootView.findViewById(R.id.linearDeposit);
         linearWithdraw = (LinearLayout) rootView.findViewById(R.id.linearWithdraw);
 
-        linearBCSpending.setOnClickListener(this);
-        linearBCSavings.setOnClickListener(this);
-        linearLCSpending.setOnClickListener(this);
-        linearLCSavings.setOnClickListener(this);
+        rippleViewBCSpending.setOnRippleCompleteListener(this);
+        rippleViewBCSavings.setOnRippleCompleteListener(this);
+        rippleViewLCSpending.setOnRippleCompleteListener(this);
+        rippleViewLCSavings.setOnRippleCompleteListener(this);
 
         linearSend.setOnClickListener(this);
         linearRequest.setOnClickListener(this);
@@ -125,18 +126,6 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.linear_bc_spending:
-                goTo(Dashboard.class);
-                break;
-            case R.id.linear_bc_savings:
-                goTo(Dashboard.class);
-                break;
-            case R.id.linear_lc_spending:
-                goTo(Dashboard.class);
-                break;
-            case R.id.linear_lc_savings:
-                goTo(Dashboard.class);
-                break;
             case R.id.linearSend:
                 goTo(SendMoney.class);
                 break;
@@ -148,6 +137,24 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
                 break;
             case R.id.linearWithdraw:
                 Toast.makeText(getActivity(), "Withdraw!", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    @Override
+    public void onComplete(RippleView rippleView) {
+        switch (rippleView.getId()) {
+            case R.id.rippleBCSpending:
+                goTo(Dashboard.class);
+                break;
+            case R.id.rippleBCSavings:
+                goTo(Dashboard.class);
+                break;
+            case R.id.rippleLCSpending:
+                goTo(Dashboard.class);
+                break;
+            case R.id.rippleLCSavings:
+                goTo(Dashboard.class);
                 break;
         }
     }
