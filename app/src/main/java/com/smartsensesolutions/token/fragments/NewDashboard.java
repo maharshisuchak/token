@@ -7,7 +7,9 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.text.Html;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,21 +17,25 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.andexert.library.RippleView;
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.activity.Dashboard;
 import com.smartsensesolutions.token.activity.ReceiveMoney;
 import com.smartsensesolutions.token.activity.SendMoney;
+import com.smartsensesolutions.token.adapters.WalletAdapter;
+import com.smartsensesolutions.token.model.WalletPOJO;
+import com.smartsensesolutions.token.utils.RecyclerItemClickListener;
 
-public class NewDashboard extends Fragment implements View.OnClickListener, RippleView.OnRippleCompleteListener {
+import java.util.ArrayList;
+
+public class NewDashboard extends Fragment implements View.OnClickListener {
 
     private LinearLayout linearSend, linearRequest, linearDeposit, linearWithdraw;
-    private TextView text_bc_spending_money, text_bc_savings_money, text_lc_spending_money, text_lc_savings_money;
     private SwipeRefreshLayout swipeRefreshLayout;
-    private RippleView rippleViewBCSpending, rippleViewBCSavings, rippleViewLCSpending, rippleViewLCSavings;
+    private ArrayList<WalletPOJO> walletList = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private WalletAdapter mAdapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,14 +53,19 @@ public class NewDashboard extends Fragment implements View.OnClickListener, Ripp
     }
 
     public void initializeControls(View rootView) {
-        rippleViewBCSpending = (RippleView) rootView.findViewById(R.id.rippleBCSpending);
-        rippleViewBCSavings = (RippleView) rootView.findViewById(R.id.rippleBCSavings);
-        rippleViewLCSpending = (RippleView) rootView.findViewById(R.id.rippleLCSpending);
-        rippleViewLCSavings = (RippleView) rootView.findViewById(R.id.rippleLCSavings);
-        text_bc_spending_money = (TextView) rootView.findViewById(R.id.text_bc_spending_money);
-        text_bc_savings_money = (TextView) rootView.findViewById(R.id.text_bc_savings_money);
-        text_lc_spending_money = (TextView) rootView.findViewById(R.id.text_lc_spending_money);
-        text_lc_savings_money = (TextView) rootView.findViewById(R.id.text_lc_savings_money);
+
+
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view_wallets);
+
+        mAdapter = new WalletAdapter(walletList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, true);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(mAdapter);
+        recyclerView.clearFocus();
+
+        prepareWalletData();
+
         swipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeRefresh);
 
         linearSend = (LinearLayout) rootView.findViewById(R.id.linearSend);
@@ -62,21 +73,10 @@ public class NewDashboard extends Fragment implements View.OnClickListener, Ripp
         linearDeposit = (LinearLayout) rootView.findViewById(R.id.linearDeposit);
         linearWithdraw = (LinearLayout) rootView.findViewById(R.id.linearWithdraw);
 
-        rippleViewBCSpending.setOnRippleCompleteListener(this);
-        rippleViewBCSavings.setOnRippleCompleteListener(this);
-        rippleViewLCSpending.setOnRippleCompleteListener(this);
-        rippleViewLCSavings.setOnRippleCompleteListener(this);
-
         linearSend.setOnClickListener(this);
         linearRequest.setOnClickListener(this);
         linearDeposit.setOnClickListener(this);
         linearWithdraw.setOnClickListener(this);
-
-        text_bc_spending_money.setText(Html.fromHtml("<small><sup>$</sup></small>" + 0 + "<small><sup>00</sup></small>"));
-        text_bc_savings_money.setText(Html.fromHtml("<small><sup>$</sup></small>" + 0 + "<small><sup>00</sup></small>"));
-        text_lc_spending_money.setText(Html.fromHtml("<small><sup>$</sup></small>" + 0 + "<small><sup>00</sup></small>"));
-        text_lc_savings_money.setText(Html.fromHtml("<small><sup>$</sup></small>" + 0 + "<small><sup>00</sup></small>"));
-
 
         swipeRefreshLayout.setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
@@ -93,6 +93,54 @@ public class NewDashboard extends Fragment implements View.OnClickListener, Ripp
                 }
         );
 
+
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(),
+                recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                goTo(Dashboard.class);
+            }
+
+            @Override
+            public void onLongItemClick(View view, int position) {
+
+            }
+        }));
+
+    }
+
+    public void prepareWalletData() {
+        try {
+            WalletPOJO wallet = new WalletPOJO(getResources().getString(R.string.bc_spending));
+            walletList.add(wallet);
+
+            wallet = new WalletPOJO(getResources().getString(R.string.bc_savings));
+            walletList.add(wallet);
+
+            wallet = new WalletPOJO(getResources().getString(R.string.lc_spending));
+            walletList.add(wallet);
+
+            wallet = new WalletPOJO(getResources().getString(R.string.lc_savings));
+            walletList.add(wallet);
+
+            wallet = new WalletPOJO(getResources().getString(R.string.bc_spending));
+            walletList.add(wallet);
+
+            wallet = new WalletPOJO(getResources().getString(R.string.bc_savings));
+            walletList.add(wallet);
+
+            wallet = new WalletPOJO(getResources().getString(R.string.lc_spending));
+            walletList.add(wallet);
+
+            wallet = new WalletPOJO(getResources().getString(R.string.lc_savings));
+            walletList.add(wallet);
+
+            mAdapter.notifyDataSetChanged();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void goTo(Class targetClass) {
@@ -137,24 +185,6 @@ public class NewDashboard extends Fragment implements View.OnClickListener, Ripp
                 break;
             case R.id.linearWithdraw:
                 Toast.makeText(getActivity(), "Withdraw!", Toast.LENGTH_SHORT).show();
-                break;
-        }
-    }
-
-    @Override
-    public void onComplete(RippleView rippleView) {
-        switch (rippleView.getId()) {
-            case R.id.rippleBCSpending:
-                goTo(Dashboard.class);
-                break;
-            case R.id.rippleBCSavings:
-                goTo(Dashboard.class);
-                break;
-            case R.id.rippleLCSpending:
-                goTo(Dashboard.class);
-                break;
-            case R.id.rippleLCSavings:
-                goTo(Dashboard.class);
                 break;
         }
     }
