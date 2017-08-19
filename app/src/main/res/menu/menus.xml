@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_scan_barcode"
-        android:icon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/ic_barcode"
         android:orderInCategory="1"
         android:title=""
         app:showAsAction="always" />

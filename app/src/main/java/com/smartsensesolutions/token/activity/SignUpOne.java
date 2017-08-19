@@ -1,6 +1,7 @@
 package com.smartsensesolutions.token.activity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -20,7 +21,7 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
 
     private TextView txtContinue, txtEmailError, txtPasswordError, txtRePasswordError, actionBack;
     private EditText edEmail, edPassword, edRePassword;
-    private ImageView imageIndicatorOne;
+    private ImageView imageIndicatorOne, img_logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,8 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
         imageIndicatorOne = (ImageView) findViewById(R.id.img_indicator_one);
         imageIndicatorOne.setImageResource(R.drawable.ic_grey_selected_dot);
         actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
+        img_logo = (ImageView) findViewById(R.id.img_logo);
+        img_logo.setVisibility(View.GONE);
 
         actionBack.setOnClickListener(this);
         txtContinue.setOnClickListener(this);

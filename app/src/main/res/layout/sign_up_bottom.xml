@@ -81,6 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_left_slim_arrow"
             android:gravity="left"
             android:text="@string/back_title"
             android:textColor="@android:color/darker_gray"
@@ -92,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/ic_hello_logo" />
 
         <TextView
             android:id="@+id/txt_bottom_skip"
@@ -102,7 +103,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/skip_title"
-            android:textColor="@color/gray_text"
+            android:textColor="@android:color/darker_gray"
             android:visibility="invisible" />
 
     </LinearLayout>

@@ -30,8 +30,8 @@
     <dimen name="number_five_dp">5dp</dimen>
 
     <dimen name="landing_text_size_header">25sp</dimen>
-    <dimen name="landing_text_size_footer">15sp</dimen>
-    <dimen name="landing_text_size_sign_up_two_header">20sp</dimen>
+    <dimen name="landing_text_size_footer">20sp</dimen>
+    <dimen name="landing_text_size_sign_up_two_header">16sp</dimen>
     <dimen name="landing_text_size_sign_up_two_dollar_header">15sp</dimen>
     <dimen name="landing_text_menu_detail">13sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->

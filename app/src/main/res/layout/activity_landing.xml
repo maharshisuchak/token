@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/ic_landing_background"
     android:orientation="vertical"
     tools:context="com.smartsensesolutions.token.activity.Landing">
 
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_footer_landing"
         android:gravity="center"
+        android:textColor="@color/dark_grey"
         android:text="@string/landing_title"
         android:textSize="@dimen/landing_text_size_header" />
 
@@ -22,17 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:src="@mipmap/ic_launcher_round" />
-
-    <TextView
-        android:id="@+id/txt_landing_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/img_landing_logo"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:text="@string/landing_footer_title"
-        android:textSize="@dimen/landing_text_size_footer" />
+        android:src="@drawable/ic_landing_logo_with_text" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -73,6 +64,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="bottom"
                 android:layout_weight="1"
+                android:textColor="@android:color/darker_gray"
                 android:text="@string/landing_signin_extra_title"
                 android:textSize="@dimen/landing_text_size_footer" />
 
