@@ -25,6 +25,7 @@
     <string name="scan_title">Scan</string>
 
     <string name="wallet_setting_title">Wallet Settings</string>
+    <string name="recent_transaction_title">Recent Transactions</string>
 
     <string name="sign_up_three_verify_pin_title">Now, please verify your PIN:</string>
 

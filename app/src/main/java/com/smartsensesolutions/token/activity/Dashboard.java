@@ -6,7 +6,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
 
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.adapters.DashboardAdapter;
@@ -18,7 +17,6 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private TextView actionBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +28,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
     public void initializeControls() {
         try {
-            actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
             viewPager = (ViewPager) findViewById(R.id.viewpager);
             tabLayout = (TabLayout) findViewById(R.id.tabs);
-
-            actionBack.setOnClickListener(this);
 
             setupViewPager(viewPager);
             tabLayout.setupWithViewPager(viewPager);
@@ -69,17 +64,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-    }
-
-    @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.sign_up_one_sign_up_back:
-                onBackPressed();
-                break;
-        }
+
     }
 }

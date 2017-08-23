@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.activity.Dashboard;
+import com.smartsensesolutions.token.activity.NewTransactionActivity;
 import com.smartsensesolutions.token.activity.ReceiveMoney;
 import com.smartsensesolutions.token.activity.SendMoney;
 import com.smartsensesolutions.token.adapters.WalletAdapter;
@@ -58,7 +59,8 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view_wallets);
 
         mAdapter = new WalletAdapter(walletList);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, true);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(),
+                LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
@@ -98,7 +100,7 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
                 recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                goTo(Dashboard.class);
+                goTo(NewTransactionActivity.class);
             }
 
             @Override

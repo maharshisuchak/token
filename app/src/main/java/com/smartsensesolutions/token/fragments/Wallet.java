@@ -9,23 +9,17 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.smartsensesolutions.token.R;
 import com.smartsensesolutions.token.activity.ReceiveMoney;
 import com.smartsensesolutions.token.activity.SendMoney;
-import com.smartsensesolutions.token.config.ConfigCommonClass;
 
 public class Wallet extends Fragment implements View.OnClickListener {
 
     private TextView txtSendMoney, txtRequestMoney;
     private SwipeRefreshLayout swipeRefreshLayout;
-    private ScrollView scrollView;
-    private LinearLayout relativeFragmentWallet;
 
 
     public Wallet() {
@@ -51,8 +45,6 @@ public class Wallet extends Fragment implements View.OnClickListener {
         txtSendMoney = (TextView) rootView.findViewById(R.id.txt_wallet_send_money);
         txtRequestMoney = (TextView) rootView.findViewById(R.id.txt_wallet_request_money);
         swipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeRefresh);
-        scrollView = (ScrollView) rootView.findViewById(R.id.scrollFooterWallet);
-        relativeFragmentWallet = (LinearLayout) rootView.findViewById(R.id.relativeFragmentWallet);
         txtSendMoney.setOnClickListener(this);
         txtRequestMoney.setOnClickListener(this);
 

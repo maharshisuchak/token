@@ -47,7 +47,7 @@ public class TokenSendingDetails extends AppCompatActivity implements View.OnCli
                 onBackPressed();
                 break;
             case R.id.txt_send:
-                goTo(Dashboard.class);
+                goTo(NewTransactionActivity.class);
                 break;
         }
     }
