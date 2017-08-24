@@ -37,7 +37,6 @@ public class TokenSendingDetails extends AppCompatActivity implements View.OnCli
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
     @Override
@@ -57,7 +56,6 @@ public class TokenSendingDetails extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent(TokenSendingDetails.this, targetClass);
             intent.putExtra(ConfigCommonStrings.KEY_INTENT_FROM_TOKEN_SENDING, ConfigCommonStrings.VALUE_INTENT_FROM_TOKEN_SENDING);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }

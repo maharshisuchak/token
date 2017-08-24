@@ -7,7 +7,7 @@ public class ConfigCommonStrings {
             "  \"transactions\": [\n" +
             "    {\n" +
             "      \"transaction_id\": \"1\",\n" +
-            "      \"transaction_date\": \"Jul 13, 2017\",\n" +
+            "      \"transaction_date\": \"Jul 12, 2017\",\n" +
             "      \"transaction_details\": [\n" +
             "        {\n" +
             "          \"transaction_title\": \"Receive Money\",\n" +
@@ -16,6 +16,14 @@ public class ConfigCommonStrings {
             "          \"transaction_extra\": \"From a bitcoin address\",\n" +
             "          \"transaction_bitcoion\": \"1.2083 Bitcoin\",\n" +
             "          \"transaction_status\": \"unconfirmed\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"transaction_title\": \"Transfered Money\",\n" +
+            "          \"transaction_type\": \"transferred\",\n" +
+            "          \"transaction_amount\": \"$335.37\",\n" +
+            "          \"transaction_extra\": \"into Bitcoin Savings\",\n" +
+            "          \"transaction_bitcoion\": \"1.2083 Bitcoin\",\n" +
+            "          \"transaction_status\": \"normal\"\n" +
             "        }\n" +
             "      ]\n" +
             "    },\n" +
@@ -38,6 +46,14 @@ public class ConfigCommonStrings {
             "          \"transaction_extra\": \"into Bitcoin Savings\",\n" +
             "          \"transaction_bitcoion\": \"1.2083 Bitcoin\",\n" +
             "          \"transaction_status\": \"normal\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"transaction_title\": \"Sent Money\",\n" +
+            "          \"transaction_type\": \"sent\",\n" +
+            "          \"transaction_amount\": \"-$122.25\",\n" +
+            "          \"transaction_extra\": \"From a bitcoin address\",\n" +
+            "          \"transaction_bitcoion\": \"1.2083 Bitcoin\",\n" +
+            "          \"transaction_status\": \"minus\"\n" +
             "        }\n" +
             "      ]\n" +
             "    },\n" +

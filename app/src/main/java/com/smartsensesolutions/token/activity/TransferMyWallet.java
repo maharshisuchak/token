@@ -107,7 +107,6 @@ public class TransferMyWallet extends AppCompatActivity implements AdapterView.O
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
     @Override
@@ -136,7 +135,6 @@ public class TransferMyWallet extends AppCompatActivity implements AdapterView.O
         try {
             Intent intent = new Intent(TransferMyWallet.this, targetClass);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }

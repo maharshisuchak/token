@@ -77,7 +77,6 @@ public class SendMoney extends AppCompatActivity implements AdapterView.OnItemSe
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
     @Override
@@ -109,7 +108,6 @@ public class SendMoney extends AppCompatActivity implements AdapterView.OnItemSe
         try {
             Intent intent = new Intent(SendMoney.this, targetClass);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }

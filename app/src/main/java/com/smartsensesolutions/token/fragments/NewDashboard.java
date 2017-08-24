@@ -14,13 +14,13 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.smartsensesolutions.token.R;
-import com.smartsensesolutions.token.activity.Dashboard;
 import com.smartsensesolutions.token.activity.NewTransactionActivity;
 import com.smartsensesolutions.token.activity.ReceiveMoney;
 import com.smartsensesolutions.token.activity.SendMoney;
@@ -105,7 +105,18 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
 
             @Override
             public void onLongItemClick(View view, int position) {
+                view.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent event) {
+                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
 
+                        } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                            // Released
+                            goTo(NewTransactionActivity.class);
+                        }
+                        return true;
+                    }
+                });
             }
         }));
 
@@ -149,7 +160,6 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
         try {
             Intent intent = new Intent(getActivity(), targetClass);
             startActivity(intent);
-            getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }

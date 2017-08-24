@@ -36,7 +36,6 @@ public class SignUpFour extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
     @Override
@@ -58,7 +57,6 @@ public class SignUpFour extends AppCompatActivity implements View.OnClickListene
         try {
             Intent intent = new Intent(SignUpFour.this, targetClass);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -81,7 +81,6 @@ public class Wallet extends Fragment implements View.OnClickListener {
         try {
             Intent intent = new Intent(getActivity(), targetClass);
             startActivity(intent);
-            getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }

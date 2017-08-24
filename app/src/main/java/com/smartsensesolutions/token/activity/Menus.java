@@ -29,7 +29,7 @@ public class Menus extends AppCompatActivity implements View.OnClickListener {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_menu_toolbar);
+        getSupportActionBar().setIcon(R.drawable.ic_hello_logo_menu);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -65,7 +65,6 @@ public class Menus extends AppCompatActivity implements View.OnClickListener {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
     }
 
@@ -122,7 +121,6 @@ public class Menus extends AppCompatActivity implements View.OnClickListener {
         try {
             Intent intent = new Intent(Menus.this, targetClass);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }

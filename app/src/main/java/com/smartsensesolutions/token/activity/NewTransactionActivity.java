@@ -10,6 +10,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,7 +31,7 @@ public class NewTransactionActivity extends AppCompatActivity implements View.On
 
     private LinearLayout linearSend, linearRequest, linearDeposit, linearWithdraw;
     private SwipeRefreshLayout swipeRefreshLayout;
-    private TextView actionBack;
+    private ImageView actionBack;
     private LinearLayout linear;
     private TransactionsAdapter mAdapter;
     private ArrayList<TransactionDetailPOJO> transactionList = new ArrayList<TransactionDetailPOJO>();
@@ -45,7 +47,7 @@ public class NewTransactionActivity extends AppCompatActivity implements View.On
 
     public void initializeControls() {
 
-        actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
+        actionBack = (ImageView) findViewById(R.id.image_back);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefresh);
 
         linearSend = (LinearLayout) findViewById(R.id.linearSend);
@@ -84,7 +86,6 @@ public class NewTransactionActivity extends AppCompatActivity implements View.On
         try {
             Intent intent = new Intent(this, targetClass);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -93,7 +94,6 @@ public class NewTransactionActivity extends AppCompatActivity implements View.On
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
     public void generateView() {
@@ -133,10 +133,15 @@ public class NewTransactionActivity extends AppCompatActivity implements View.On
 
     public void generateDynamicRecyclerView(ArrayList<TransactionDetailPOJO> transactionList) {
         try {
+            LinearLayout.LayoutParams params = new
+                    LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT);
             RecyclerView recyclerView = new RecyclerView(this);
             RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
             recyclerView.setLayoutManager(mLayoutManager);
             recyclerView.setItemAnimator(new DefaultItemAnimator());
+            //recyclerView.setLayoutParams(params);
+            //recyclerView.setNestedScrollingEnabled(false);
             mAdapter = new TransactionsAdapter(transactionList);
             recyclerView.setAdapter(mAdapter);
             linear.addView(recyclerView);
@@ -162,7 +167,7 @@ public class NewTransactionActivity extends AppCompatActivity implements View.On
             case R.id.linearWithdraw:
                 Toast.makeText(this, "Withdraw!", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.sign_up_one_sign_up_back:
+            case R.id.image_back:
                 onBackPressed();
                 break;
         }

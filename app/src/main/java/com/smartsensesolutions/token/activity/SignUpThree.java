@@ -67,7 +67,6 @@ public class SignUpThree extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
     @Override
@@ -216,7 +215,6 @@ public class SignUpThree extends AppCompatActivity implements View.OnClickListen
         try {
             Intent intent = new Intent(SignUpThree.this, targetClass);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.smartsensesolutions.token.R;
@@ -19,11 +20,13 @@ public class WalletAdapter extends RecyclerView.Adapter<WalletAdapter.MyViewHold
     private ArrayList<WalletPOJO> walletList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        private LinearLayout linearLayout;
         public TextView walletTitle, walletAmount;
         public ImageView walletImage;
 
         public MyViewHolder(View view) {
             super(view);
+            linearLayout = (LinearLayout) view.findViewById(R.id.linear_bc_spending);
             walletTitle = (TextView) view.findViewById(R.id.text_bc_spending_title);
             walletAmount = (TextView) view.findViewById(R.id.text_bc_spending_money);
             walletImage = (ImageView) view.findViewById(R.id.image_bc_spending);
@@ -37,14 +40,14 @@ public class WalletAdapter extends RecyclerView.Adapter<WalletAdapter.MyViewHold
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
+        final View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_wallets, parent, false);
 
         return new MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
         WalletPOJO wallet = walletList.get(position);
         holder.walletTitle.setText(wallet.getWallet_title());
 

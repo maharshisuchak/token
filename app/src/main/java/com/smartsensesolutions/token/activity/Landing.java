@@ -38,7 +38,6 @@ public class Landing extends AppCompatActivity implements View.OnClickListener {
         try {
             Intent intent = new Intent(Landing.this, targetClass);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } catch (Exception e) {
             e.printStackTrace();
         }
