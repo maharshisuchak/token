@@ -14,7 +14,6 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -105,18 +104,19 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
 
             @Override
             public void onLongItemClick(View view, int position) {
-                view.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View view, MotionEvent event) {
-                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-//                            Toast.makeText(getActivity(), "pressed", Toast.LENGTH_SHORT).show();
-                        } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                            // Released
-                            goTo(NewTransactionActivity.class);
-                        }
-                        return true;
-                    }
-                });
+                goTo(NewTransactionActivity.class);
+//                view.setOnTouchListener(new View.OnTouchListener() {
+//                    @Override
+//                    public boolean onTouch(View view, MotionEvent event) {
+//                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+////                            Toast.makeText(getActivity(), "pressed", Toast.LENGTH_SHORT).show();
+//                        } else if (event.getAction() == MotionEvent.ACTION_UP) {
+//                            // Released
+//                            goTo(NewTransactionActivity.class);
+//                        }
+//                        return true;
+//                    }
+//                });
             }
         }));
 

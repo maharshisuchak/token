@@ -13,16 +13,16 @@
 
         <ImageView
             android:id="@+id/image_back"
-            android:layout_width="@dimen/back_tra_width"
-            android:layout_height="@dimen/back_tra_height"
+            android:layout_width="@dimen/back_width"
+            android:layout_height="@dimen/back_height"
             android:layout_gravity="right|center"
-            android:layout_marginRight="@dimen/number_twenty_dp"
-            android:padding="@dimen/number_five_dp"
+            android:layout_marginRight="@dimen/number_ten_dp"
+            android:layout_weight="0.3"
             android:src="@drawable/ic_back" />
 
         <TextView
             android:id="@+id/sign_up_one_sign_up_back"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -35,8 +35,8 @@
             android:layout_height="@dimen/icon_height"
             android:layout_alignParentRight="true"
             android:layout_gravity="right"
-            android:layout_marginRight="@dimen/number_twenty_dp"
-            android:padding="@dimen/number_ten_dp"
+            android:layout_marginRight="@dimen/number_ten_dp"
+            android:padding="@dimen/number_five_dp"
             android:src="@drawable/ic_barcode" />
 
     </LinearLayout>

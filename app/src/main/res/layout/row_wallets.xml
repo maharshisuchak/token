@@ -3,7 +3,7 @@
     android:id="@+id/linear_bc_spending"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
+    android:background="@drawable/ripple_wallets"
     android:clickable="true"
     android:paddingBottom="@dimen/number_ten_dp"
     android:paddingLeft="@dimen/number_ten_dp"

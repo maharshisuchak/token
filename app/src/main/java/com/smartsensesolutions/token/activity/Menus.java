@@ -28,7 +28,7 @@ public class Menus extends AppCompatActivity implements View.OnClickListener {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         //getSupportActionBar().setIcon(R.drawable.ic_hello_logo);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
