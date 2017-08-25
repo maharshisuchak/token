@@ -10,7 +10,7 @@ import com.smartsensesolutions.token.R;
 
 public class EnterAmount extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtContinue, actionBack, txtEmpty;
+    private TextView txtContinue, txtEmpty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +22,13 @@ public class EnterAmount extends AppCompatActivity implements View.OnClickListen
 
     public void initializeControls() {
         txtContinue = (TextView) findViewById(R.id.txt_continue);
-        actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
         txtEmpty = (TextView) findViewById(R.id.txt_empty);
         txtEmpty.setText(getResources().getString(R.string.rn_dot));
-        actionBack.setOnClickListener(this);
         txtContinue.setOnClickListener(this);
+    }
+
+    public void customBackPressed(View view) {
+        onBackPressed();
     }
 
     @Override
@@ -39,9 +41,6 @@ public class EnterAmount extends AppCompatActivity implements View.OnClickListen
         switch (view.getId()) {
             case R.id.txt_continue:
                 goTo(TokenSendingDetails.class);
-                break;
-            case R.id.sign_up_one_sign_up_back:
-                onBackPressed();
                 break;
         }
     }

@@ -11,7 +11,7 @@ import com.smartsensesolutions.token.config.ConfigCommonStrings;
 
 public class TokenSendingDetails extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView actionBack, txtSend;
+    private TextView txtSend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,7 @@ public class TokenSendingDetails extends AppCompatActivity implements View.OnCli
 
     public void initializeControls() {
         try {
-            actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
             txtSend = (TextView) findViewById(R.id.txt_send);
-            actionBack.setOnClickListener(this);
             txtSend.setOnClickListener(this);
         } catch (NullPointerException e) {
             e.printStackTrace();
@@ -39,12 +37,14 @@ public class TokenSendingDetails extends AppCompatActivity implements View.OnCli
         super.onBackPressed();
     }
 
+    public void customBackPressed(View view) {
+        onBackPressed();
+    }
+
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.sign_up_one_sign_up_back:
-                onBackPressed();
-                break;
             case R.id.txt_send:
                 goTo(NewTransactionActivity.class);
                 break;

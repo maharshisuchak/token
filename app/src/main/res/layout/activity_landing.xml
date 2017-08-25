@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_landing_background"
+    android:background="@drawable/ic_hello_background"
     android:orientation="vertical"
     tools:context="com.smartsensesolutions.token.activity.Landing">
 
@@ -11,27 +11,37 @@
         android:id="@+id/txt_landing_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_footer_landing"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/number_ten_dp"
+        android:layout_marginLeft="@dimen/margin_footer_landing"
+        android:layout_marginRight="@dimen/margin_footer_landing"
+        android:layout_marginTop="@dimen/margin_footer_landing"
         android:gravity="center"
-        android:textColor="@color/dark_grey"
         android:text="@string/landing_title"
+        android:textColor="@color/dark_grey"
         android:textSize="@dimen/landing_text_size_header" />
 
     <ImageView
         android:id="@+id/img_landing_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/linearBelow"
+        android:layout_below="@+id/txt_landing_header"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:src="@drawable/ic_landing_logo_with_text" />
+        android:padding="@dimen/number_ten_dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_landing_logo" />
 
     <LinearLayout
+        android:id="@+id/linearBelow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="@dimen/margin_landing"
         android:layout_marginRight="@dimen/margin_landing"
+        android:layout_marginTop="@dimen/margin_footer_landing"
         android:orientation="vertical">
 
         <TextView
@@ -64,8 +74,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="bottom"
                 android:layout_weight="1"
-                android:textColor="@android:color/darker_gray"
                 android:text="@string/landing_signin_extra_title"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/landing_text_size_footer" />
 
             <TextView

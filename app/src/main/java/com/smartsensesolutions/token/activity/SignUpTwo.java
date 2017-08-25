@@ -15,7 +15,7 @@ import com.smartsensesolutions.token.R;
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
 public class SignUpTwo extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtContinue, txtOne, txtTwo, txtThree, txtFour, txtFive, txtSix, txtSeven, txtEight, txtNine, txtZero, actionBack, txtBottomSkip;
+    private TextView txtContinue, txtOne, txtTwo, txtThree, txtFour, txtFive, txtSix, txtSeven, txtEight, txtNine, txtZero, txtBottomSkip;
     private ImageView imageIndicatorTwo, imagePinOne, imagePinTwo, imagePinThree, imagePinFour, txtBack;
     private String strPin = "";
 
@@ -39,7 +39,6 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
         txtNine = (TextView) findViewById(R.id.txt_nine);
         txtZero = (TextView) findViewById(R.id.txt_zero);
         txtBack = (ImageView) findViewById(R.id.txt_back);
-        actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
         txtBottomSkip = (TextView) findViewById(R.id.txt_bottom_skip);
         txtBottomSkip.setVisibility(View.VISIBLE);
 
@@ -63,7 +62,6 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
         txtNine.setOnClickListener(this);
         txtZero.setOnClickListener(this);
         txtBack.setOnClickListener(this);
-        actionBack.setOnClickListener(this);
         txtBottomSkip.setOnClickListener(this);
     }
 
@@ -111,14 +109,16 @@ public class SignUpTwo extends AppCompatActivity implements View.OnClickListener
             case R.id.txt_back:
                 performBack();
                 break;
-            case R.id.sign_up_one_sign_up_back:
-                onBackPressed();
-                break;
             case R.id.txt_bottom_skip:
                 goTo(SignUpFour.class);
                 break;
         }
     }
+
+    public void customBackPressed(View view) {
+        onBackPressed();
+    }
+
 
     public void validateCreatePin() {
         try {

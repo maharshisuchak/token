@@ -1,7 +1,6 @@
 package com.smartsensesolutions.token.activity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -19,7 +18,7 @@ import com.smartsensesolutions.token.config.ConfigCommonClass;
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
 public class SignUpOne extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtContinue, txtEmailError, txtPasswordError, txtRePasswordError, actionBack;
+    private TextView txtContinue, txtEmailError, txtPasswordError, txtRePasswordError;
     private EditText edEmail, edPassword, edRePassword;
     private ImageView imageIndicatorOne, img_logo;
 
@@ -42,11 +41,9 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
         txtRePasswordError = (TextView) findViewById(R.id.txt_re_password_error);
         imageIndicatorOne = (ImageView) findViewById(R.id.img_indicator_one);
         imageIndicatorOne.setImageResource(R.drawable.ic_grey_selected_dot);
-        actionBack = (TextView) findViewById(R.id.sign_up_one_sign_up_back);
         img_logo = (ImageView) findViewById(R.id.img_logo);
         img_logo.setVisibility(View.GONE);
 
-        actionBack.setOnClickListener(this);
         txtContinue.setOnClickListener(this);
 
 
@@ -161,6 +158,10 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
         }
     }
 
+    public void customBackPressed(View view) {
+        onBackPressed();
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -171,9 +172,6 @@ public class SignUpOne extends AppCompatActivity implements View.OnClickListener
         switch (view.getId()) {
             case R.id.txt_sign_up_continue:
                 validateSingUp();
-                break;
-            case R.id.sign_up_one_sign_up_back:
-                onBackPressed();
                 break;
         }
     }

@@ -7,15 +7,37 @@
     android:orientation="vertical"
     tools:context="com.smartsensesolutions.token.activity.ReceiveMoney">
 
-    <TextView
-        android:id="@+id/sign_up_one_sign_up_back"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/number_ten_dp"
+        android:layout_marginRight="@dimen/number_ten_dp"
         android:layout_marginTop="@dimen/number_five_dp"
-        android:drawableLeft="@drawable/ic_left_arrow"
-        android:drawablePadding="@dimen/number_five_dp"
-        android:gravity="center"
-        android:text="@string/rm_rm_title" />
+        android:onClick="customBackPressed"
+        android:orientation="horizontal"
+        android:padding="@dimen/number_five_dp">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="@dimen/back_width"
+            android:layout_height="@dimen/back_width"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/sign_up_one_sign_up_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/number_ten_dp"
+            android:gravity="center"
+            android:text="@string/rm_rm_title"
+            android:textColor="@color/dark_grey" />
+
+    </LinearLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"

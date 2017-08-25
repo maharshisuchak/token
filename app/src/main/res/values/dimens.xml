@@ -11,7 +11,7 @@
     <dimen name="so_tv_mt">20dp</dimen>
 
     <dimen name="st_title_mt">20dp</dimen>
-    <dimen name="st_dot_mt">40dp</dimen>
+    <dimen name="st_dot_mt">10dp</dimen>
 
     <dimen name="sthree_dot_mt">80dp</dimen>
 
@@ -63,6 +63,12 @@
 
     <dimen name="spinner_icon_height">30dp</dimen>
     <dimen name="spinner_icon_width">30dp</dimen>
+
+    <dimen name="back_height">20dp</dimen>
+    <dimen name="back_width">20dp</dimen>
+
+    <dimen name="back_tra_height">20dp</dimen>
+    <dimen name="back_tra_width">20dp</dimen>
 
     <dimen name="icon_height">35dp</dimen>
     <dimen name="icon_width">35dp</dimen>

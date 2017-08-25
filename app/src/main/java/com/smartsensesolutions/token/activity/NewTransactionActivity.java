@@ -141,7 +141,7 @@ public class NewTransactionActivity extends AppCompatActivity implements View.On
             recyclerView.setLayoutManager(mLayoutManager);
             recyclerView.setItemAnimator(new DefaultItemAnimator());
             //recyclerView.setLayoutParams(params);
-            //recyclerView.setNestedScrollingEnabled(false);
+            recyclerView.setNestedScrollingEnabled(false);
             mAdapter = new TransactionsAdapter(transactionList);
             recyclerView.setAdapter(mAdapter);
             linear.addView(recyclerView);

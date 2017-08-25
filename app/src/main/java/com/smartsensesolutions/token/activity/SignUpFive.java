@@ -31,6 +31,10 @@ public class SignUpFive extends AppCompatActivity implements View.OnClickListene
         actionBack.setOnClickListener(this);
     }
 
+    public void customBackPressed(View view) {
+        onBackPressed();
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -41,9 +45,6 @@ public class SignUpFive extends AppCompatActivity implements View.OnClickListene
         switch (view.getId()) {
             case R.id.txt_sign_up_continue:
                 goTo(SignUpSix.class);
-                break;
-            case R.id.sign_up_one_sign_up_back:
-                onBackPressed();
                 break;
         }
     }

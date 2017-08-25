@@ -41,7 +41,7 @@
                     android:layout_marginTop="@dimen/margin_numbers_top"
                     android:layout_gravity="center"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:src="@drawable/ic_tollbar_menu" />
+                    android:src="@drawable/ic_toolbar_menu" />
 
                 <TextView
                     android:layout_width="wrap_content"

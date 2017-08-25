@@ -62,6 +62,12 @@
     <dimen name="spinner_icon_height">30dp</dimen>
     <dimen name="spinner_icon_width">30dp</dimen>
 
+    <dimen name="back_height">20dp</dimen>
+    <dimen name="back_width">20dp</dimen>
+
+    <dimen name="back_tra_height">35dp</dimen>
+    <dimen name="back_tra_width">35dp</dimen>
+
     <dimen name="icon_height">50dp</dimen>
     <dimen name="icon_width">50dp</dimen>
 

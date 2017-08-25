@@ -109,7 +109,7 @@ public class NewDashboard extends Fragment implements View.OnClickListener {
                     @Override
                     public boolean onTouch(View view, MotionEvent event) {
                         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
+//                            Toast.makeText(getActivity(), "pressed", Toast.LENGTH_SHORT).show();
                         } else if (event.getAction() == MotionEvent.ACTION_UP) {
                             // Released
                             goTo(NewTransactionActivity.class);
